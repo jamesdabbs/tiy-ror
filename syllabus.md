@@ -1,9 +1,9 @@
 ## Contact Info
 
-James Dabbs
-james@theironyard.com
-(706) 426-1618
-Often on HipChat
+    James Dabbs
+    james@theironyard.com
+    (706) 426-1618
+    Often on HipChat
 
 
 ## Policies
@@ -17,7 +17,7 @@ explicit though -
 
 You should receive a .pdf of the official class schedule on the first day.
 Attendance is expected every day class is in session, but not required. If you
-miss more than *4* days, your job placement may be forfeit.
+miss more than **4** days, your job placement may be forfeit.
 
 
 ## Code of Conduct
