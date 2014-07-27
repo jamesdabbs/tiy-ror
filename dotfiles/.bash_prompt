@@ -1,14 +1,14 @@
 # Name the colors we'll be using to make them somewhat readable
-GREEN="\e[38;5;48m"
-YELLOW="\e[38;5;228m"
-ORANGE="\e[38;5;214m"
+ORANGE="\[\e[38;5;214m\]"
+YELLOW="\[\e[38;5;228m\]"
+CYAN="\[\e[0;36m\]"
 
-WHITE="\e[38;5;255m"
-LIGHT="\e[38;5;251m"
-DARK="\e[38;5;238m"
+WHITE="\[\e[1;37m\]"
+LIGHT="\[\e[0;37m\]"
+DARK="\[\e[38;5;240m\]"
 
 # Set the prompt
 # \u - user
 # \h - host
 # \w - working directory
-export PS1=" ${ORANGE}\u ${DARK}@ ${YELLOW}\h ${DARK}in ${GREEN}\w ${WHITE}$ ${LIGHT}"
+export PS1="${ORANGE}\u ${DARK}@ ${YELLOW}\h ${DARK}in ${CYAN}\w ${LIGHT}\$ "

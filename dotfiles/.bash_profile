@@ -7,7 +7,7 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Enable command line colors, and set some better color defaults for ls
 export CLICOLOR=1
-export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
+export LSCOLORS="gxfxcxdxbxegedabagacad"
 
 # Add some personal customization, if available
 if [[ -f "$HOME/.bash_prompt" ]]; then source "$HOME/.bash_prompt"; fi
