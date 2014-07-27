@@ -39,7 +39,7 @@ interest, so feel free to suggest other projects earlier.
 
 In short
 
-![be excellent to each other](http://imgur.com/GUK7sDN)
+![be excellent to each other](http://imgur.com/GUK7sDN.png)
 
 In long
 
