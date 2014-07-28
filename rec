@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+# ^ That is a shebang line. It tells the shell that this script should be
+#   executed with the environment ruby (i.e. the one active in rbenv)
+
+# Find a sensible, unused log name like $HOME/log/pry.2014-07-28.1
+# ARGV is an array of the arguments passed to this script
+path, i = "#{ENV['HOME']}/log/#{ARGV.first}.#{Time.now.strftime('%F')}", 1
+i += 1 while File.exists?("#{path}.#{i}")
+
+puts "Recording #{ARGV.join ' '} > #{path}.#{i}"
+
+# `script` forces line-buffering, an irritating technical detail
+# `tee` prints the output of a command both to the given file and to the screen
+exec "script -q /dev/null '#{ARGV.join ' '}' | tee '#{path}.#{i}'"
