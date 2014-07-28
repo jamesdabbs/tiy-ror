@@ -1,0 +1,25 @@
+[0G[1] pry(main)> def describe [K(object)
+[1A[0G[1] pry(main)> [32mdef[0m [1;34mdescribe[0m(object)[1B[0G[1] pry(main)*   print [K[K[K[K[Kuts object.to_s "[K+ " is a " + object.class.to_s
+[1A[0G[1] pry(main)*   puts object.to_s + [31m[1;31m"[0m[31m is a [1;31m"[0m[31m[0m + object.class.to_s[1B[0G[1] pry(main)*   end
+[1A[0G[1] pry(main)* [32mend[0m  [1B[0G=> [33m:describe[0m[0m
+[2] pry(main)> end  puts object.to_s + " is a " + object.class.to_s[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[29Pdef describe(object)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C  puts object.to_s + " is a " + object.class.to_s[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[29Pdef describe(object)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls me[Kdef describe(object)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C  puts object.to_s + " is a " + object.class.to_s[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cend[K[Kend  puts object.to_s + " is a " + object.class.to_s[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cend[K  puts object.to_s + " is a " + object.class.to_s[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cend[K[Kend  puts object.to_s + " is a " + object.class.to_s[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cend[K[Kdescribe(me)
+[1A[0G[2] pry(main)> describe(me)[1B[0GNameError: undefined local variable or method `me' for main:Object
+from (pry):4:in `__pry__'
+[3] pry(main)> me = { first_name: "A[KJames" }
+[1A[0G[3] pry(main)> me = { [35mfirst_name[0m: [31m[1;31m"[0m[31mJames[1;31m"[0m[31m[0m }[1B[0G=> {[33m:first_name[0m=>[31m[1;31m"[0m[31mJames[1;31m"[0m[31m[0m}[0m
+[4] pry(main)> descir[K[Kribe(me)
+[1A[0G[4] pry(main)> describe(me)[1B[0G{:first_name=>"James"} is a Hash
+=> [1;36mnil[0m[0m
+[5] pry(main)> def example([K
+[1A[0G[5] pry(main)> [32mdef[0m [1;34mexample[0m[1B[0G[5] pry(main)*   put "[K[Ks "This string should be printed"
+[1A[0G[5] pry(main)*   puts [31m[1;31m"[0m[31mThis string should be printed[1;31m"[0m[31m[0m[1B[0G[5] pry(main)*   2
+[1A[0G[5] pry(main)*   [1;34m2[0m[1B[0G[5] pry(main)*   end
+[1A[0G[5] pry(main)* [32mend[0m  [1B[0G=> [33m:example[0m[0m
+[6] pry(main)> example
+[1A[0G[6] pry(main)> example[1B[0GThis string should be printed
+=> [1;34m2[0m[0m
+[7] pry(main)> def really_describe(object)
+[1A[0G[7] pry(main)> [32mdef[0m [1;34mreally_describe[0m(object)[1B[0G[7] pry(main)*   describe(object)
+[1A[0G[7] pry(main)*   describe(object)[1B[0G[7] pry(main)*   puts "It has " + object.method.[Ks.length " many methods"
+[1A[0G[7] pry(main)*   puts [31m[1;31m"[0m[31mIt has [1;31m"[0m[31m[0m + object.methods.length [31m[1;31m"[0m[31m many methods[1;31m"[0m[31m[0m[1B[0G[7] pry(main)*   puts "It knows about  [K" =[K+ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[8] pry(main)> 

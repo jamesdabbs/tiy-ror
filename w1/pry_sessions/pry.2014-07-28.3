@@ -1,0 +1,270 @@
+[0G[1] pry(main)> 2  +[K[K+ 3
+[1A[0G[1] pry(main)> [1;34m2[0m + [1;34m3[0m[1B[0G=> [1;34m5[0m[0m
+[2] pry(main)> 2 < 3
+[1A[0G[2] pry(main)> [1;34m2[0m < [1;34m3[0m[1B[0G=> [1;36mtrue[0m[0m
+[3] pry(main)> true
+[1A[0G[3] pry(main)> [1;36mtrue[0m[1B[0G=> [1;36mtrue[0m[0m
+[4] pry(main)> false
+[1A[0G[4] pry(main)> [1;36mfalse[0m[1B[0G=> [1;36mfalse[0m[0m
+[5] pry(main)> nil
+[1A[0G[5] pry(main)> [1;36mnil[0m[1B[0G=> [1;36mnil[0m[0m
+[6] pry(main)> "First part " + "second part"
+[1A[0G[6] pry(main)> [31m[1;31m"[0m[31mFirst part [1;31m"[0m[31m[0m + [31m[1;31m"[0m[31msecond part[1;31m"[0m[31m[0m[1B[0G=> [31m[1;31m"[0m[31mFirst part second part[1;31m"[0m[31m[0m[0m
+[7] pry(main)> 2.to_s
+[1A[0G[7] pry(main)> [1;34m2[0m.to_s[1B[0G=> [31m[1;31m"[0m[31m2[1;31m"[0m[31m[0m[0m
+[8] pry(main)> 2
+[1A[0G[8] pry(main)> [1;34m2[0m[1B[0G=> [1;34m2[0m[0m
+[9] pry(main)> 2.tos[K_s
+[1A[0G[9] pry(main)> [1;34m2[0m.to_s[1B[0G=> [31m[1;31m"[0m[31m2[1;31m"[0m[31m[0m[0m
+[10] pry(main)> 2 + 7
+[1A[0G[10] pry(main)> [1;34m2[0m + [1;34m7[0m[1B[0G=> [1;34m9[0m[0m
+[11] pry(main)> 2.to_s + 7.to_s
+[1A[0G[11] pry(main)> [1;34m2[0m.to_s + [1;34m7[0m.to_s[1B[0G=> [31m[1;31m"[0m[31m27[1;31m"[0m[31m[0m[0m
+[12] pry(main)> [1,2] + [3,4]
+[1A[0G[12] pry(main)> [[1;34m1[0m,[1;34m2[0m] + [[1;34m3[0m,[1;34m4[0m][1B[0G=> [[1;34m1[0m, [1;34m2[0m, [1;34m3[0m, [1;34m4[0m][0m
+[13] pry(main)> true + false
+[1A[0G[13] pry(main)> [1;36mtrue[0m + [1;36mfalse[0m[1B[0GNoMethodError: undefined method `+' for true:TrueClass
+from (pry):13:in `__pry__'
+[14] pry(main)> 2.class
+[1A[0G[14] pry(main)> [1;34m2[0m.class[1B[0G=> [1;34;4mFixnum[0m[0m
+[15] pry(main)> "This is a string".class
+[1A[0G[15] pry(main)> [31m[1;31m"[0m[31mThis is a string[1;31m"[0m[31m[0m.class[1B[0G=> [1;34;4mString[0m[0m
+[16] pry(main)> [1,2,:stuff].class
+[1A[0G[16] pry(main)> [[1;34m1[0m,[1;34m2[0m,[33m:stuff[0m].class[1B[0G=> [1;34;4mArray[0m[0m
+[17] pry(main)> true.class
+[1A[0G[17] pry(main)> [1;36mtrue[0m.class[1B[0G=> [1;34;4mTrueClass[0m[0m
+[18] pry(main)> 2.methods
+[1A[0G[18] pry(main)> [1;34m2[0m.methods[1B[0G[?1h==> [[33m:to_s[0m,[m
+ [33m:inspect[0m,[m
+ [33m:-@[0m,[m
+ [33m:+[0m,[m
+ [33m:-[0m,[m
+ [33m:*[0m,[m
+ [33m:/[0m,[m
+ [33m:div[0m,[m
+ [33m:%[0m,[m
+ [33m:modulo[0m,[m
+ [33m:divmod[0m,[m
+ [33m:fdiv[0m,[m
+ [33m:**[0m,[m
+ [33m:abs[0m,[m
+ [33m:magnitude[0m,[m
+ [33m:==[0m,[m
+ [33m:===[0m,[m
+ [33m:<=>[0m,[m
+ [33m:>[0m,[m
+ [33m:>=[0m,[m
+ [33m:<[0m,[m
+ [33m:<=[0m,[m
+ [33m:~[0m,[m
+ [33m:&[0m,[m
+ [33m:|[0m,[m
+ [33m:^[0m,[m
+ [33m:[][0m,[m
+:[K[K [33m:<<[0m,[m
+ [33m:>>[0m,[m
+ [33m:to_f[0m,[m
+ [33m:size[0m,[m
+ [33m:bit_length[0m,[m
+ [33m:zero?[0m,[m
+ [33m:odd?[0m,[m
+ [33m:even?[0m,[m
+ [33m:succ[0m,[m
+ [33m:integer?[0m,[m
+ [33m:upto[0m,[m
+ [33m:downto[0m,[m
+ [33m:times[0m,[m
+ [33m:next[0m,[m
+ [33m:pred[0m,[m
+ [33m:chr[0m,[m
+ [33m:ord[0m,[m
+ [33m:to_i[0m,[m
+ [33m:to_int[0m,[m
+ [33m:floor[0m,[m
+ [33m:ceil[0m,[m
+ [33m:truncate[0m,[m
+ [33m:round[0m,[m
+ [33m:gcd[0m,[m
+ [33m:lcm[0m,[m
+ [33m:gcdlcm[0m,[m
+ [33m:numerator[0m,[m
+:[K[K[?1l>[19] pry(main)> 2.methods
+[1A[0G[19] pry(main)> [1;34m2[0m.methods[1B[0G[?1h==> [[33m:to_s[0m,[m
+ [33m:inspect[0m,[m
+ [33m:-@[0m,[m
+ [33m:+[0m,[m
+ [33m:-[0m,[m
+ [33m:*[0m,[m
+ [33m:/[0m,[m
+ [33m:div[0m,[m
+ [33m:%[0m,[m
+ [33m:modulo[0m,[m
+ [33m:divmod[0m,[m
+ [33m:fdiv[0m,[m
+ [33m:**[0m,[m
+ [33m:abs[0m,[m
+ [33m:magnitude[0m,[m
+ [33m:==[0m,[m
+ [33m:===[0m,[m
+ [33m:<=>[0m,[m
+ [33m:>[0m,[m
+ [33m:>=[0m,[m
+ [33m:<[0m,[m
+ [33m:<=[0m,[m
+ [33m:~[0m,[m
+ [33m:&[0m,[m
+ [33m:|[0m,[m
+ [33m:^[0m,[m
+ [33m:[][0m,[m
+:[K[K [33m:<<[0m,[m
+ [33m:>>[0m,[m
+ [33m:to_f[0m,[m
+ [33m:size[0m,[m
+ [33m:bit_length[0m,[m
+ [33m:zero?[0m,[m
+ [33m:odd?[0m,[m
+ [33m:even?[0m,[m
+ [33m:succ[0m,[m
+ [33m:integer?[0m,[m
+ [33m:upto[0m,[m
+ [33m:downto[0m,[m
+ [33m:times[0m,[m
+ [33m:next[0m,[m
+ [33m:pred[0m,[m
+ [33m:chr[0m,[m
+ [33m:ord[0m,[m
+ [33m:to_i[0m,[m
+ [33m:to_int[0m,[m
+ [33m:floor[0m,[m
+ [33m:ceil[0m,[m
+ [33m:truncate[0m,[m
+ [33m:round[0m,[m
+ [33m:gcd[0m,[m
+ [33m:lcm[0m,[m
+ [33m:gcdlcm[0m,[m
+ [33m:numerator[0m,[m
+:[K[K [33m:denominator[0m,[m
+ [33m:to_r[0m,[m
+ [33m:rationalize[0m,[m
+ [33m:singleton_method_added[0m,[m
+ [33m:coerce[0m,[m
+ [33m:i[0m,[m
+ [33m:+@[0m,[m
+ [33m:eql?[0m,[m
+ [33m:remainder[0m,[m
+ [33m:real?[0m,[m
+ [33m:nonzero?[0m,[m
+ [33m:step[0m,[m
+ [33m:quo[0m,[m
+ [33m:to_c[0m,[m
+ [33m:real[0m,[m
+ [33m:imaginary[0m,[m
+ [33m:imag[0m,[m
+ [33m:abs2[0m,[m
+ [33m:arg[0m,[m
+ [33m:angle[0m,[m
+ [33m:phase[0m,[m
+ [33m:rectangular[0m,[m
+ [33m:rect[0m,[m
+ [33m:polar[0m,[m
+ [33m:conjugate[0m,[m
+ [33m:conj[0m,[m
+ [33m:pretty_print_cycle[0m,[m
+:[K[K [33m:pretty_print[0m,[m
+ [33m:between?[0m,[m
+ [33m:pry[0m,[m
+ [33m:__binding__[0m,[m
+ [33m:pretty_print_instance_variables[0m,[m
+ [33m:pretty_print_inspect[0m,[m
+ [33m:nil?[0m,[m
+ [33m:=~[0m,[m
+ [33m:!~[0m,[m
+ [33m:hash[0m,[m
+ [33m:class[0m,[m
+ [33m:singleton_class[0m,[m
+ [33m:clone[0m,[m
+ [33m:dup[0m,[m
+ [33m:taint[0m,[m
+ [33m:tainted?[0m,[m
+ [33m:untaint[0m,[m
+ [33m:untrust[0m,[m
+ [33m:untrusted?[0m,[m
+ [33m:trust[0m,[m
+ [33m:freeze[0m,[m
+ [33m:frozen?[0m,[m
+ [33m:methods[0m,[m
+ [33m:singleton_methods[0m,[m
+ [33m:protected_methods[0m,[m
+ [33m:private_methods[0m,[m
+ [33m:public_methods[0m,[m
+:[K[K [33m:instance_variables[0m,[m
+ [33m:instance_variable_get[0m,[m
+ [33m:instance_variable_set[0m,[m
+ [33m:instance_variable_defined?[0m,[m
+ [33m:remove_instance_variable[0m,[m
+ [33m:instance_of?[0m,[m
+ [33m:kind_of?[0m,[m
+ [33m:is_a?[0m,[m
+ [33m:tap[0m,[m
+ [33m:send[0m,[m
+ [33m:public_send[0m,[m
+ [33m:respond_to?[0m,[m
+ [33m:extend[0m,[m
+ [33m:display[0m,[m
+ [33m:method[0m,[m
+ [33m:public_method[0m,[m
+ [33m:singleton_method[0m,[m
+ [33m:define_singleton_method[0m,[m
+ [33m:object_id[0m,[m
+ [33m:to_enum[0m,[m
+ [33m:enum_for[0m,[m
+ [33m:pretty_inspect[0m,[m
+ [33m:equal?[0m,[m
+ [33m:![0m,[m
+ [33m:!=[0m,[m
+ [33m:instance_eval[0m,[m
+ [33m:instance_exec[0m,[m
+:[K[K[?1l>[20] pry(main)> 2[Kls [K
+[1A[0G[20] pry(main)> ls[1B[0G[1m[1;34mself.methods[0m[0m: inspect  to_s
+[1m[1;34mlocals[0m[0m: _  __  _dir_  _ex_  _file_  _in_  _out_  _pry_
+[21] pry(main)> ls 2
+[1A[0G[21] pry(main)> ls [1;34m2[0m[1B[0G[1m[1;34mComparable#methods[0m[0m: between?
+[1m[1;34mNumeric#methods[0m[0m: 
+  +@     coerce     i          phase               quo    rectangular             to_c
+  abs2   conj       imag       polar               real   remainder             
+  angle  conjugate  imaginary  pretty_print        real?  singleton_method_added
+  arg    eql?       nonzero?   pretty_print_cycle  rect   step                  
+[1m[1;34mInteger#methods[0m[0m: 
+  ceil  denominator  floor  gcdlcm    lcm   numerator  pred         round  to_i    to_r      upto
+  chr   downto       gcd    integer?  next  ord        rationalize  times  to_int  truncate
+[1m[1;34mFixnum#methods[0m[0m: 
+  %  **  -@  <<   ==   >=  ^           div     fdiv       modulo  succ  zero?
+  &  +   /   <=   ===  >>  abs         divmod  inspect    odd?    to_f  |    
+  *  -   <   <=>  >    []  bit_length  even?   magnitude  size    to_s  ~    
+[22] pry(main)> array [K[K[K[K[K[Kme = { :first_name => "James", :last_name => "Dabbs" }
+[1A[0G[22] pry(main)> me = { [33m:first_name[0m => [31m[1;31m"[0m[31mJames[1;31m"[0m[31m[0m, [33m:last_name[0m => [31m[1;31m"[0m[31mDabbs[1;31m"[0m[31m[0m }[1B[0G=> {[33m:first_name[0m=>[31m[1;31m"[0m[31mJames[1;31m"[0m[31m[0m, [33m:last_name[0m=>[31m[1;31m"[0m[31mDabbs[1;31m"[0m[31m[0m}[0m
+[23] pry(main)> 2 + 2
+[1A[0G[23] pry(main)> [1;34m2[0m + [1;34m2[0m[1B[0G=> [1;34m4[0m[0m
+[24] pry(main)> me
+[1A[0G[24] pry(main)> me[1B[0G=> {[33m:first_name[0m=>[31m[1;31m"[0m[31mJames[1;31m"[0m[31m[0m, [33m:last_name[0m=>[31m[1;31m"[0m[31mDabbs[1;31m"[0m[31m[0m}[0m
+[25] pry(main)> me = nil[K[K[K[K[K[K[K[Kls
+[1A[0G[25] pry(main)> ls[1B[0G[1m[1;34mself.methods[0m[0m: inspect  to_s
+[1m[1;34mlocals[0m[0m: _  __  _dir_  _ex_  _file_  _in_  _out_  _pry_  [0;33mme[0m
+[26] pry(main)> ls me
+[1A[0G[26] pry(main)> ls me[1B[0G[1m[1;34mEnumerable#methods[0m[0m: 
+  all?            cycle       each_slice        find_index  lazy    minmax     reverse_each  zip
+  any?            detect      each_with_index   first       map     minmax_by  slice_before
+  chunk           drop        each_with_object  flat_map    max     none?      sort        
+  collect         drop_while  entries           grep        max_by  one?       sort_by     
+  collect_concat  each_cons   find              group_by    min     partition  take        
+  count           each_entry  find_all          inject      min_by  reduce     take_while  
+[1m[1;34mHash#methods[0m[0m: 
+  ==                    default=       each_value  include?  length              reject   to_a     
+  []                    default_proc   empty?      index     member?             reject!  to_h     
+  []=                   default_proc=  eql?        inspect   merge               replace  to_hash  
+  assoc                 delete         fetch       invert    merge!              select   to_s     
+  clear                 delete_if      flatten     keep_if   pretty_print        select!  update   
+  compare_by_identity   each           has_key?    key       pretty_print_cycle  shift    value?   
+  compare_by_identity?  each_key       has_value?  key?      rassoc              size     values   
+  default               each_pair      hash        keys      rehash              store    values_at
+[27] pry(main)> 

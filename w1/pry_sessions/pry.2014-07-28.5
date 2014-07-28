@@ -1,0 +1,490 @@
+[0G[1] pry(main)>   puts "It has " + object.methods.length " many methods"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdescribe(object)[K[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdef really_describe(object)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexample[Kdef really_describe(object)
+[1A[0G[1] pry(main)> [32mdef[0m [1;34mreally_describe[0m(object)[1B[0G[1] pry(main)*   def really_describe(object)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C  puts "It has " + object.methods.length " many methods"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdescribe(object)[Kdef really_describe(object)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[9P  describe(object)[K
+[2] pry(main)> def really_describe(object)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C  puts "It has " + object.methods.length " many methods"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdescribe(object)[K[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdef really_describe(object)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexample[K[4Pnd  2puts "This string should be printed"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdef example[Kscribe(me)me = { first_name: "James" }[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[16Pdescribe(me)me = { first_name: "James" }[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[16Pdescribe(me)end[K  puts object.to_s + " is a " + object.class.to_s[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[29Pdef describe(object)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls me[Kdef describe(object)
+[1A[0G[2] pry(main)> [32mdef[0m [1;34mdescribe[0m(object)[1B[0G[2] pry(main)*   def describe(object)really_describe(object)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C  puts "It has " + object.methods.length " many methods"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdescribe(object)[Kdef really_describe(object)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexample[K[4Pnd  2puts "This string should be printed"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdef example[Kscribe(me)me = { first_name: "James" }[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[16Pdescribe(me)end[K  puts object.to_s + " is a " + object.class.to_s[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[29Pdef describe(object)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C  puts object.to_s + " is a " + object.class.to_s
+[1A[0G[2] pry(main)*   puts object.to_s + [31m[1;31m"[0m[31m is a [1;31m"[0m[31m[0m + object.class.to_s  [1B[0G[2] pry(main)*   end
+[1A[0G[2] pry(main)* [32mend[0m  [1B[0G=> [33m:describe[0m[0m
+[3] pry(main)> d[Kend  puts object.to_s + " is a " + object.class.to_s[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[29Pdef describe(object)really_describe(object)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C  puts "It has " + object.methods.length " many methods"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[29Pdef really_describe(object)
+[1A[0G[3] pry(main)> [32mdef[0m [1;34mreally_describe[0m(object)[1B[0G[3] pry(main)*   describe(object)
+[1A[0G[3] pry(main)*   describe(object)[1B[0G[3] pry(main)*   puts "It has " + object.methods.length + " many methods"
+[1A[0G[3] pry(main)*   puts [31m[1;31m"[0m[31mIt has [1;31m"[0m[31m[0m + object.methods.length + [31m[1;31m"[0m[31m many methods[1;31m"[0m[31m[0m[1B[0G[3] pry(main)*   end
+[1A[0G[3] pry(main)* [32mend[0m  [1B[0G=> [33m:really_describe[0m[0m
+[4] pry(main)> really_describe("String to be s[Kdescribed")
+[1A[0G[4] pry(main)> really_describe([31m[1;31m"[0m[31mString to be described[1;31m"[0m[31m[0m)[1B[0GString to be described is a String
+TypeError: no implicit conversion of Fixnum into String
+from (pry):6:in `+'
+[5] pry(main)> really_describe("String to be described")[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cend[K  puts "It has " + object.methods.length + " many methods"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdescribe(object)[K[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdef really_describe(object)
+[1A[0G[5] pry(main)> [32mdef[0m [1;34mreally_describe[0m(object)[1B[0G[5] pry(main)*   def really_describe(object)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Creally_describe("String to be described")[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cend[K  puts "It has " + object.methods.length + " many methods"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdescribe(object)[K
+[1A[0G[5] pry(main)*   describe(object)  [1B[0G[5] pry(main)*     describe(object)def really_describe(object)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Creally_describe("String to be described")[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cend[K  puts "It has " + object.methods.length + " many methods"[1@.[1@t[1@o[1@_[1@s
+[1A[0G[5] pry(main)*   puts [31m[1;31m"[0m[31mIt has [1;31m"[0m[31m[0m + object.methods.length.to_s + [31m[1;31m"[0m[31m many methods[1;31m"[0m[31m[0m  [1B[0G[5] pry(main)*   end
+[1A[0G[5] pry(main)* [32mend[0m  [1B[0G=> [33m:really_describe[0m[0m
+[6] pry(main)> end  puts "It has " + object.methods.length.to_s + " many methods"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdescribe(object)[K[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdef really_describe(object)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[9P  describe(object)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdef really_describe(object)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Creally_describe("String to be described")
+[1A[0G[6] pry(main)> really_describe([31m[1;31m"[0m[31mString to be described[1;31m"[0m[31m[0m)[1B[0GString to be described is a String
+It has 176 many methods
+=> [1;36mnil[0m[0m
+[7] pry(main)> "This template will be used #{2}[K[K[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ka = [1,2,3]
+[1A[0G[7] pry(main)> a = [[1;34m1[0m,[1;34m2[0m,[1;34m3[0m][1B[0G=> [[1;34m1[0m, [1;34m2[0m, [1;34m3[0m][0m
+[8] pry(main)> "This is interpolation: #{a} ... #{a.length} many items"
+[1A[0G[8] pry(main)> [31m[1;31m"[0m[31mThis is interpolation: #{a}[0m[31m ... #{a.length}[0m[31m many items[1;31m"[0m[31m[0m[1B[0G=> [31m[1;31m"[0m[31mThis is interpolation: [1, 2, 3] ... 3 many items[1;31m"[0m[31m[0m[0m
+[9] pry(main)> "Here's a[C[C[C[C[C[C[C[C[C[Kex = "Here's a sample string"
+[1A[0G[9] pry(main)> ex = [31m[1;31m"[0m[31mHere's a sample string[1;31m"[0m[31m[0m[1B[0G=> [31m[1;31m"[0m[31mHere's a sample string[1;31m"[0m[31m[0m[0m
+[10] pry(main)> ls ex
+[1A[0G[10] pry(main)> ls ex[1B[0G[1m[1;34mComparable#methods[0m[0m: <  <=  >  >=  between?
+[1m[1;34mString#methods[0m[0m: 
+  %            casecmp     dump            hex        prepend      slice        to_i           
+  *            center      each_byte       include?   replace      slice!       to_r           
+  +            chars       each_char       index      reverse      split        to_s           
+  <<           chomp       each_codepoint  insert     reverse!     squeeze      to_str         
+  <=>          chomp!      each_line       inspect    rindex       squeeze!     to_sym         
+  ==           chop        empty?          intern     rjust        start_with?  tr             
+  ===          chop!       encode          length     rpartition   strip        tr!            
+  =~           chr         encode!         lines      rstrip       strip!       tr_s           
+  []           clear       encoding        ljust      rstrip!      sub          tr_s!          
+  []=          codepoints  end_with?       lstrip     scan         sub!         unpack         
+  ascii_only?  concat      eql?            lstrip!    scrub        succ         upcase         
+  b            count       force_encoding  match      scrub!       succ!        upcase!        
+  bytes        crypt       freeze          next       setbyte      sum          upto           
+  bytesize     delete      getbyte         next!      shell_split  swapcase     valid_encoding?
+  byteslice    delete!     gsub            oct        shellescape  swapcase!  
+  capitalize   downcase    gsub!           ord        shellsplit   to_c       
+  capitalize!  downcase!   hash            partition  size         to_f       
+[11] pry(main)> ls ex[Kex = [K[K[K.upcate[K[Kse
+[1A[0G[11] pry(main)> ex.upcase[1B[0G=> [31m[1;31m"[0m[31mHERE'S A SAMPLE STRING[1;31m"[0m[31m[0m[0m
+[12] pry(main)>  [Kex[K[Kangry = ex.update[K[K[K[Kcase
+[1A[0G[12] pry(main)> angry = ex.upcase[1B[0G=> [31m[1;31m"[0m[31mHERE'S A SAMPLE STRING[1;31m"[0m[31m[0m[0m
+[13] pry(main)> angry
+[1A[0G[13] pry(main)> angry[1B[0G=> [31m[1;31m"[0m[31mHERE'S A SAMPLE STRING[1;31m"[0m[31m[0m[0m
+[14] pry(main)> ex
+[1A[0G[14] pry(main)> ex[1B[0G=> [31m[1;31m"[0m[31mHere's a sample string[1;31m"[0m[31m[0m[0m
+[15] pry(main)> e.[Kx.upcase!
+[1A[0G[15] pry(main)> ex.upcase![1B[0G=> [31m[1;31m"[0m[31mHERE'S A SAMPLE STRING[1;31m"[0m[31m[0m[0m
+[16] pry(main)> ex
+[1A[0G[16] pry(main)> ex[1B[0G=> [31m[1;31m"[0m[31mHERE'S A SAMPLE STRING[1;31m"[0m[31m[0m[0m
+[17] pry(main)> ex.downcase!
+[1A[0G[17] pry(main)> ex.downcase![1B[0G=> [31m[1;31m"[0m[31mhere's a sample string[1;31m"[0m[31m[0m[0m
+[18] pry(main)> ex.downcase![1P![1P![1P![1P![1P![1P![1P![1P!c!a!p!i!t!a!l!i!z!e!
+[1A[0G[18] pry(main)> ex.capitalize![1B[0G=> [31m[1;31m"[0m[31mHere's a sample string[1;31m"[0m[31m[0m[0m
+[19] pry(main)> ex.capitalize![2Pdowncase![K.downcase![K.upcase!
+[1A[0G[19] pry(main)> ex.upcase![1B[0G=> [31m[1;31m"[0m[31mHERE'S A SAMPLE STRING[1;31m"[0m[31m[0m[0m
+[20] pry(main)> ex.upcase!capitalize![4Pupcase![Kex.[K
+[1A[0G[20] pry(main)> ex[1B[0G=> [31m[1;31m"[0m[31mHERE'S A SAMPLE STRING[1;31m"[0m[31m[0m[0m
+[21] pry(main)> ex.capt[Kitalize
+[1A[0G[21] pry(main)> ex.capitalize[1B[0G=> [31m[1;31m"[0m[31mHere's a sample string[1;31m"[0m[31m[0m[0m
+[22] pry(main)> ex.sub "e", "z"
+[1A[0G[22] pry(main)> ex.sub [31m[1;31m"[0m[31me[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mz[1;31m"[0m[31m[0m[1B[0G=> [31m[1;31m"[0m[31mHERE'S A SAMPLE STRING[1;31m"[0m[31m[0m[0m
+[23] pry(main)> ex
+[1A[0G[23] pry(main)> ex[1B[0G=> [31m[1;31m"[0m[31mHERE'S A SAMPLE STRING[1;31m"[0m[31m[0m[0m
+[24] pry(main)> ex.dow[K[K[Kcapitz[Kalize!
+[1A[0G[24] pry(main)> ex.capitalize![1B[0G=> [31m[1;31m"[0m[31mHere's a sample string[1;31m"[0m[31m[0m[0m
+[25] pry(main)> ex.capitalize![K.sub "e", "z"
+[1A[0G[25] pry(main)> ex.sub [31m[1;31m"[0m[31me[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mz[1;31m"[0m[31m[0m[1B[0G=> [31m[1;31m"[0m[31mHzre's a sample string[1;31m"[0m[31m[0m[0m
+[26] pry(main)> ex.sub "e", "z"[1@g
+[1A[0G[26] pry(main)> ex.gsub [31m[1;31m"[0m[31me[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mz[1;31m"[0m[31m[0m[1B[0G=> [31m[1;31m"[0m[31mHzrz's a samplz string[1;31m"[0m[31m[0m[0m
+[27] pry(main)> ex
+[1A[0G[27] pry(main)> ex[1B[0G=> [31m[1;31m"[0m[31mHere's a sample string[1;31m"[0m[31m[0m[0m
+[28] pry(main)> ex.gsub "e", "z"[1@!
+[1A[0G[28] pry(main)> ex.gsub! [31m[1;31m"[0m[31me[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mz[1;31m"[0m[31m[0m[1B[0G=> [31m[1;31m"[0m[31mHzrz's a samplz string[1;31m"[0m[31m[0m[0m
+[29] pry(main)> ex
+[1A[0G[29] pry(main)> ex[1B[0G=> [31m[1;31m"[0m[31mHzrz's a samplz string[1;31m"[0m[31m[0m[0m
+[30] pry(main)> ex.s[Kgs[K[Ks[Kgsub "string", "stange[K[K[K[Krange"
+[1A[0G[30] pry(main)> ex.gsub [31m[1;31m"[0m[31mstring[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mstrange[1;31m"[0m[31m[0m[1B[0G=> [31m[1;31m"[0m[31mHzrz's a samplz strange[1;31m"[0m[31m[0m[0m
+[31] pry(main)> ex.split(" ")
+[1A[0G[31] pry(main)> ex.split([31m[1;31m"[0m[31m [1;31m"[0m[31m[0m)[1B[0G=> [[31m[1;31m"[0m[31mHzrz's[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31ma[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31msamplz[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mstring[1;31m"[0m[31m[0m][0m
+[32] pry(main)> ex.split(" ")[1P")
+[1A[0G[32] pry(main)> ex.split([31m[1;31m"[0m[31m[1;31m"[0m[31m[0m)[1B[0G=> [[31m[1;31m"[0m[31mH[1;31m"[0m[31m[0m,
+ [31m[1;31m"[0m[31mz[1;31m"[0m[31m[0m,
+ [31m[1;31m"[0m[31mr[1;31m"[0m[31m[0m,
+ [31m[1;31m"[0m[31mz[1;31m"[0m[31m[0m,
+ [31m[1;31m"[0m[31m'[1;31m"[0m[31m[0m,
+ [31m[1;31m"[0m[31ms[1;31m"[0m[31m[0m,
+ [31m[1;31m"[0m[31m [1;31m"[0m[31m[0m,
+ [31m[1;31m"[0m[31ma[1;31m"[0m[31m[0m,
+ [31m[1;31m"[0m[31m [1;31m"[0m[31m[0m,
+ [31m[1;31m"[0m[31ms[1;31m"[0m[31m[0m,
+ [31m[1;31m"[0m[31ma[1;31m"[0m[31m[0m,
+ [31m[1;31m"[0m[31mm[1;31m"[0m[31m[0m,
+ [31m[1;31m"[0m[31mp[1;31m"[0m[31m[0m,
+ [31m[1;31m"[0m[31ml[1;31m"[0m[31m[0m,
+ [31m[1;31m"[0m[31mz[1;31m"[0m[31m[0m,
+ [31m[1;31m"[0m[31m [1;31m"[0m[31m[0m,
+ [31m[1;31m"[0m[31ms[1;31m"[0m[31m[0m,
+ [31m[1;31m"[0m[31mt[1;31m"[0m[31m[0m,
+ [31m[1;31m"[0m[31mr[1;31m"[0m[31m[0m,
+ [31m[1;31m"[0m[31mi[1;31m"[0m[31m[0m,
+ [31m[1;31m"[0m[31mn[1;31m"[0m[31m[0m,
+ [31m[1;31m"[0m[31mg[1;31m"[0m[31m[0m][0m
+[33] pry(main)> ex.split("")s")
+[1A[0G[33] pry(main)> ex.split([31m[1;31m"[0m[31ms[1;31m"[0m[31m[0m)[1B[0G=> [[31m[1;31m"[0m[31mHzrz'[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31m a [1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mamplz [1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mtring[1;31m"[0m[31m[0m][0m
+[34] pry(main)> ex.split("s")!("s")
+[1A[0G[34] pry(main)> ex.split!([31m[1;31m"[0m[31ms[1;31m"[0m[31m[0m)[1B[0GNoMethodError: undefined method `split!' for "Hzrz's a samplz string":String
+from (pry):40:in `__pry__'
+[35] pry(main)> ex.split!("s")[1P("s")[C[C[C[C[C[Kex.split("s")wex.split("s")oex.split("s")rex.split("s")dex.split("s") ex.split("s")[1Pex.split("s")sex.split("s") ex.split("s")=ex.split("s") ex.split("s")
+[1A[0G[35] pry(main)> words = ex.split([31m[1;31m"[0m[31ms[1;31m"[0m[31m[0m)[1B[0G=> [[31m[1;31m"[0m[31mHzrz'[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31m a [1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mamplz [1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mtring[1;31m"[0m[31m[0m][0m
+[36] pry(main)> wo[Kords.join(" + ")
+[1A[0G[36] pry(main)> words.join([31m[1;31m"[0m[31m + [1;31m"[0m[31m[0m)[1B[0G=> [31m[1;31m"[0m[31mHzrz' +  a  + amplz  + tring[1;31m"[0m[31m[0m[0m
+[37] pry(main)> sn[Kent = "Quick brown fox"
+[1A[0G[37] pry(main)> sent = [31m[1;31m"[0m[31mQuick brown fox[1;31m"[0m[31m[0m[1B[0G=> [31m[1;31m"[0m[31mQuick brown fox[1;31m"[0m[31m[0m[0m
+[38] pry(main)> sent.split(" ")
+[1A[0G[38] pry(main)> sent.split([31m[1;31m"[0m[31m [1;31m"[0m[31m[0m)[1B[0G=> [[31m[1;31m"[0m[31mQuick[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mbrown[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mfox[1;31m"[0m[31m[0m][0m
+[39] pry(main)> sent.split(" ").s[Kjoin(" ")
+[1A[0G[39] pry(main)> sent.split([31m[1;31m"[0m[31m [1;31m"[0m[31m[0m).join([31m[1;31m"[0m[31m [1;31m"[0m[31m[0m)[1B[0G=> [31m[1;31m"[0m[31mQuick brown fox[1;31m"[0m[31m[0m[0m
+[40] pry(main)> a = [K[K[Krr = [1,2,3,4]
+[1A[0G[40] pry(main)> arr = [[1;34m1[0m,[1;34m2[0m,[1;34m3[0m,[1;34m4[0m][1B[0G=> [[1;34m1[0m, [1;34m2[0m, [1;34m3[0m, [1;34m4[0m][0m
+[41] pry(main)> arr.reverse
+[1A[0G[41] pry(main)> arr.reverse[1B[0G=> [[1;34m4[0m, [1;34m3[0m, [1;34m2[0m, [1;34m1[0m][0m
+[42] pry(main)> arr.first
+[1A[0G[42] pry(main)> arr.first[1B[0G=> [1;34m1[0m[0m
+[43] pry(main)> arr.first[K[K[K[K[Klast
+[1A[0G[43] pry(main)> arr.last[1B[0G=> [1;34m4[0m[0m
+[44] pry(main)> arr.last[K[K[K[K[K[Kwords = sent.split(" ")
+[1A[0G[44] pry(main)> words = sent.split([31m[1;31m"[0m[31m [1;31m"[0m[31m[0m)[1B[0G=> [[31m[1;31m"[0m[31mQuick[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mbrown[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mfox[1;31m"[0m[31m[0m][0m
+[45] pry(main)> word.first
+[1A[0G[45] pry(main)> word.first[1B[0GNameError: undefined local variable or method `word' for main:Object
+from (pry):51:in `__pry__'
+[46] pry(main)> word.firsts.first
+[1A[0G[46] pry(main)> words.first[1B[0G=> [31m[1;31m"[0m[31mQuick[1;31m"[0m[31m[0m[0m
+[47] pry(main)> words[2]
+[1A[0G[47] pry(main)> words[[1;34m2[0m][1B[0G=> [31m[1;31m"[0m[31mfox[1;31m"[0m[31m[0m[0m
+[48] pry(main)> [[Kwords[0]
+[1A[0G[48] pry(main)> words[[1;34m0[0m][1B[0G=> [31m[1;31m"[0m[31mQuick[1;31m"[0m[31m[0m[0m
+[49] pry(main)> words[0][1P]1]
+[1A[0G[49] pry(main)> words[[1;34m1[0m][1B[0G=> [31m[1;31m"[0m[31mbrown[1;31m"[0m[31m[0m[0m
+[50] pry(main)> words[1][1P]-]1]
+[1A[0G[50] pry(main)> words[[1;34m-1[0m][1B[0G=> [31m[1;31m"[0m[31mfox[1;31m"[0m[31m[0m[0m
+[51] pry(main)> words[-1][1P]2]
+[1A[0G[51] pry(main)> words[[1;34m-2[0m][1B[0G=> [31m[1;31m"[0m[31mbrown[1;31m"[0m[31m[0m[0m
+[52] pry(main)> words << "did"
+[1A[0G[52] pry(main)> words << [31m[1;31m"[0m[31mdid[1;31m"[0m[31m[0m[1B[0G=> [[31m[1;31m"[0m[31mQuick[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mbrown[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mfox[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mdid[1;31m"[0m[31m[0m][0m
+[53] pry(main)> words << "stuff"
+[1A[0G[53] pry(main)> words << [31m[1;31m"[0m[31mstuff[1;31m"[0m[31m[0m[1B[0G=> [[31m[1;31m"[0m[31mQuick[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mbrown[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mfox[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mdid[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mstuff[1;31m"[0m[31m[0m][0m
+[54] pry(main)> wi[Kords[1] = "red"
+[1A[0G[54] pry(main)> words[[1;34m1[0m] = [31m[1;31m"[0m[31mred[1;31m"[0m[31m[0m[1B[0G=> [31m[1;31m"[0m[31mred[1;31m"[0m[31m[0m[0m
+[55] pry(main)> words
+[1A[0G[55] pry(main)> words[1B[0G=> [[31m[1;31m"[0m[31mQuick[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mred[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mfox[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mdid[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mstuff[1;31m"[0m[31m[0m][0m
+[56] pry(main)> words.sample
+[1A[0G[56] pry(main)> words.sample[1B[0G=> [31m[1;31m"[0m[31mstuff[1;31m"[0m[31m[0m[0m
+[57] pry(main)> words.sample
+[1A[0G[57] pry(main)> words.sample[1B[0G=> [31m[1;31m"[0m[31mstuff[1;31m"[0m[31m[0m[0m
+[58] pry(main)> words.sample
+[1A[0G[58] pry(main)> words.sample[1B[0G=> [31m[1;31m"[0m[31mred[1;31m"[0m[31m[0m[0m
+[59] pry(main)> words.sample
+[1A[0G[59] pry(main)> words.sample[1B[0G=> [31m[1;31m"[0m[31mred[1;31m"[0m[31m[0m[0m
+[60] pry(main)> words.sample
+[1A[0G[60] pry(main)> words.sample[1B[0G=> [31m[1;31m"[0m[31mred[1;31m"[0m[31m[0m[0m
+[61] pry(main)> words.sample
+[1A[0G[61] pry(main)> words.sample[1B[0G=> [31m[1;31m"[0m[31mQuick[1;31m"[0m[31m[0m[0m
+[62] pry(main)> words.sample
+[1A[0G[62] pry(main)> words.sample[1B[0G=> [31m[1;31m"[0m[31mstuff[1;31m"[0m[31m[0m[0m
+[63] pry(main)> words.sample
+[1A[0G[63] pry(main)> words.sample[1B[0G=> [31m[1;31m"[0m[31mstuff[1;31m"[0m[31m[0m[0m
+[64] pry(main)> words.sample
+[1A[0G[64] pry(main)> words.sample[1B[0G=> [31m[1;31m"[0m[31mQuick[1;31m"[0m[31m[0m[0m
+[65] pry(main)> words.sample(2)
+[1A[0G[65] pry(main)> words.sample([1;34m2[0m)[1B[0G=> [[31m[1;31m"[0m[31mdid[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mQuick[1;31m"[0m[31m[0m][0m
+[66] pry(main)> words.sample(2)
+[1A[0G[66] pry(main)> words.sample([1;34m2[0m)[1B[0G=> [[31m[1;31m"[0m[31mfox[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mQuick[1;31m"[0m[31m[0m][0m
+[67] pry(main)> words.sample(2)
+[1A[0G[67] pry(main)> words.sample([1;34m2[0m)[1B[0G=> [[31m[1;31m"[0m[31mQuick[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mred[1;31m"[0m[31m[0m][0m
+[68] pry(main)> words.sample(2)
+[1A[0G[68] pry(main)> words.sample([1;34m2[0m)[1B[0G=> [[31m[1;31m"[0m[31mstuff[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mQuick[1;31m"[0m[31m[0m][0m
+[69] pry(main)> {[Khash = { [Kwords.sample(2)[Khash = { a:[K[K:a => 1, [K b[K:b => 2 }
+[1A[0G[69] pry(main)> hash = { [33m:a[0m => [1;34m1[0m, [33m:b[0m => [1;34m2[0m }[1B[0G=> {[33m:a[0m=>[1;34m1[0m, [33m:b[0m=>[1;34m2[0m}[0m
+[70] pry(main)> hash[:a]
+[1A[0G[70] pry(main)> hash[[33m:a[0m][1B[0G=> [1;34m1[0m[0m
+[71] pry(main)> hash[:b] [K
+[1A[0G[71] pry(main)> hash[[33m:b[0m][1B[0G=> [1;34m2[0m[0m
+[72] pry(main)> hash[:a[Kc] => 1[K[K[K 1
+[1A[0G[72] pry(main)> hash[[33m:c[0m] = [1;34m1[0m[1B[0G=> [1;34m1[0m[0m
+[73] pry(main)> hash
+[1A[0G[73] pry(main)> hash[1B[0G=> {[33m:a[0m=>[1;34m1[0m, [33m:b[0m=>[1;34m2[0m, [33m:c[0m=>[1;34m1[0m}[0m
+[74] pry(main)> hash.ov[K[Kinvers[Kt
+[1A[0G[74] pry(main)> hash.invert[1B[0G=> {[1;34m1[0m=>[33m:c[0m, [1;34m2[0m=>[33m:b[0m}[0m
+[75] pry(main)> hash.invert[K[K[K[K[K[K[K
+[1A[0G[75] pry(main)> hash[1B[0G=> {[33m:a[0m=>[1;34m1[0m, [33m:b[0m=>[1;34m2[0m, [33m:c[0m=>[1;34m1[0m}[0m
+[76] pry(main)> hash.keys
+[1A[0G[76] pry(main)> hash.keys[1B[0G=> [[33m:a[0m, [33m:b[0m, [33m:c[0m][0m
+[77] pry(main)> hash.keys[K[K[K[Kvalues
+[1A[0G[77] pry(main)> hash.values[1B[0G=> [[1;34m1[0m, [1;34m2[0m, [1;34m1[0m][0m
+[78] pry(main)> hash.values[K[K[K[K[K[Kpairs
+[1A[0G[78] pry(main)> hash.pairs[1B[0GNoMethodError: undefined method `pairs' for {:a=>1, :b=>2, :c=>1}:Hash
+from (pry):84:in `__pry__'
+[79] pry(main)> hash.pairs[K
+[1A[0G[79] pry(main)> hash.pair[1B[0GNoMethodError: undefined method `pair' for {:a=>1, :b=>2, :c=>1}:Hash
+from (pry):85:in `__pry__'
+[80] pry(main)> ls hash
+[1A[0G[80] pry(main)> ls hash[1B[0G[1m[1;34mEnumerable#methods[0m[0m: 
+  all?            cycle       each_slice        find_index  lazy    minmax     reverse_each  zip
+  any?            detect      each_with_index   first       map     minmax_by  slice_before
+  chunk           drop        each_with_object  flat_map    max     none?      sort        
+  collect         drop_while  entries           grep        max_by  one?       sort_by     
+  collect_concat  each_cons   find              group_by    min     partition  take        
+  count           each_entry  find_all          inject      min_by  reduce     take_while  
+[1m[1;34mHash#methods[0m[0m: 
+  ==                    default=       each_value  include?  length              reject   to_a     
+  []                    default_proc   empty?      index     member?             reject!  to_h     
+  []=                   default_proc=  eql?        inspect   merge               replace  to_hash  
+  assoc                 delete         fetch       invert    merge!              select   to_s     
+  clear                 delete_if      flatten     keep_if   pretty_print        select!  update   
+  compare_by_identity   each           has_key?    key       pretty_print_cycle  shift    value?   
+  compare_by_identity?  each_key       has_value?  key?      rassoc              size     values   
+  default               each_pair      hash        keys      rehash              store    values_at
+[81] pry(main)> ls hash[K[K[Kto[K[Khash.to_a
+[1A[0G[81] pry(main)> hash.to_a[1B[0G=> [[[33m:a[0m, [1;34m1[0m], [[33m:b[0m, [1;34m2[0m], [[33m:c[0m, [1;34m1[0m]][0m
+[82] pry(main)> ha[Khash
+[1A[0G[82] pry(main)> hash[1B[0G=> {[33m:a[0m=>[1;34m1[0m, [33m:b[0m=>[1;34m2[0m, [33m:c[0m=>[1;34m1[0m}[0m
+[83] pry(main)> :a == :b
+[1A[0G[83] pry(main)> [33m:a[0m == [33m:b[0m[1B[0G=> [1;36mfalse[0m[0m
+[84] pry(main)> :a == :b[Ka
+[1A[0G[84] pry(main)> [33m:a[0m == [33m:a[0m[1B[0G=> [1;36mtrue[0m[0m
+[85] pry(main)> :a == :a[K[K"a"
+[1A[0G[85] pry(main)> [33m:a[0m == [31m[1;31m"[0m[31ma[1;31m"[0m[31m[0m[1B[0G=> [1;36mfalse[0m[0m
+[86] pry(main)> hash.keys
+[1A[0G[86] pry(main)> hash.keys[1B[0G=> [[33m:a[0m, [33m:b[0m, [33m:c[0m][0m
+[87] pry(main)> hash["a"]
+[1A[0G[87] pry(main)> hash[[31m[1;31m"[0m[31ma[1;31m"[0m[31m[0m][1B[0G=> [1;36mnil[0m[0m
+[88] pry(main)> hash["strng[K[King"] = [1,2,3]
+[1A[0G[88] pry(main)> hash[[31m[1;31m"[0m[31mstring[1;31m"[0m[31m[0m] = [[1;34m1[0m,[1;34m2[0m,[1;34m3[0m][1B[0G=> [[1;34m1[0m, [1;34m2[0m, [1;34m3[0m][0m
+[89] pry(main)> hash
+[1A[0G[89] pry(main)> hash[1B[0G=> {[33m:a[0m=>[1;34m1[0m, [33m:b[0m=>[1;34m2[0m, [33m:c[0m=>[1;34m1[0m, [31m[1;31m"[0m[31mstring[1;31m"[0m[31m[0m=>[[1;34m1[0m, [1;34m2[0m, [1;34m3[0m]}[0m
+[90] pry(main)> hash["string"]
+[1A[0G[90] pry(main)> hash[[31m[1;31m"[0m[31mstring[1;31m"[0m[31m[0m][1B[0G=> [[1;34m1[0m, [1;34m2[0m, [1;34m3[0m][0m
+[91] pry(main)> hash[:string]
+[1A[0G[91] pry(main)> hash[[33m:string[0m][1B[0G=> [1;36mnil[0m[0m
+[92] pry(main)> :b
+[1A[0G[92] pry(main)> [33m:b[0m[1B[0G=> [33m:b[0m[0m
+[93] pry(main)> o = { :b => 10 }
+[1A[0G[93] pry(main)> o = { [33m:b[0m => [1;34m10[0m }[1B[0G=> {[33m:b[0m=>[1;34m10[0m}[0m
+[94] pry(main)> :b
+[1A[0G[94] pry(main)> [33m:b[0m[1B[0G=> [33m:b[0m[0m
+[95] pry(main)> o[:b]
+[1A[0G[95] pry(main)> o[[33m:b[0m][1B[0G=> [1;34m10[0m[0m
+[96] pry(main)> s = [K[K[Ktring = "James"
+[1A[0G[96] pry(main)> string = [31m[1;31m"[0m[31mJames[1;31m"[0m[31m[0m[1B[0G=> [31m[1;31m"[0m[31mJames[1;31m"[0m[31m[0m[0m
+[97] pry(main)> sym = :James
+[1A[0G[97] pry(main)> sym = [33m:James[0m[1B[0G=> [33m:James[0m[0m
+[98] pry(main)> sym == string
+[1A[0G[98] pry(main)> sym == string[1B[0G=> [1;36mfalse[0m[0m
+[99] pry(main)> sym.upcase
+[1A[0G[99] pry(main)> sym.upcase[1B[0G=> [33m:JAMES[0m[0m
+[100] pry(main)> sym[K[K[Kls sym
+[1A[0G[100] pry(main)> ls sym[1B[0G[1m[1;34mComparable#methods[0m[0m: <  <=  >  >=  between?
+[1m[1;34mSymbol#methods[0m[0m: 
+  <=>  =~          casecmp   encoding  intern  next                slice     to_proc  upcase
+  ==   []          downcase  id2name   length  pretty_print_cycle  succ      to_s   
+  ===  capitalize  empty?    inspect   match   size                swapcase  to_sym 
+[101] pry(main)> ls string
+[1A[0G[101] pry(main)> ls string[1B[0G[1m[1;34mComparable#methods[0m[0m: <  <=  >  >=  between?
+[1m[1;34mString#methods[0m[0m: 
+  %            casecmp     dump            hex        prepend      slice        to_i           
+  *            center      each_byte       include?   replace      slice!       to_r           
+  +            chars       each_char       index      reverse      split        to_s           
+  <<           chomp       each_codepoint  insert     reverse!     squeeze      to_str         
+  <=>          chomp!      each_line       inspect    rindex       squeeze!     to_sym         
+  ==           chop        empty?          intern     rjust        start_with?  tr             
+  ===          chop!       encode          length     rpartition   strip        tr!            
+  =~           chr         encode!         lines      rstrip       strip!       tr_s           
+  []           clear       encoding        ljust      rstrip!      sub          tr_s!          
+  []=          codepoints  end_with?       lstrip     scan         sub!         unpack         
+  ascii_only?  concat      eql?            lstrip!    scrub        succ         upcase         
+  b            count       force_encoding  match      scrub!       succ!        upcase!        
+  bytes        crypt       freeze          next       setbyte      sum          upto           
+  bytesize     delete      getbyte         next!      shell_split  swapcase     valid_encoding?
+  byteslice    delete!     gsub            oct        shellescape  swapcase!  
+  capitalize   downcase    gsub!           ord        shellsplit   to_c       
+  capitalize!  downcase!   hash            partition  size         to_f       
+[102] pry(main)> sym.split ([K[K("")
+[1A[0G[102] pry(main)> sym.split([31m[1;31m"[0m[31m[1;31m"[0m[31m[0m)[1B[0GNoMethodError: undefined method `split' for :James:Symbol
+from (pry):105:in `__pry__'
+[103] pry(main)> sym.split("")[K:a + :b
+[1A[0G[103] pry(main)> [33m:a[0m + [33m:b[0m[1B[0GNoMethodError: undefined method `+' for :a:Symbol
+from (pry):106:in `__pry__'
+[104] pry(main)> "a" + "b"
+[1A[0G[104] pry(main)> [31m[1;31m"[0m[31ma[1;31m"[0m[31m[0m + [31m[1;31m"[0m[31mb[1;31m"[0m[31m[0m[1B[0G=> [31m[1;31m"[0m[31mab[1;31m"[0m[31m[0m[0m
+[105] pry(main)> a = "test"
+[1A[0G[105] pry(main)> a = [31m[1;31m"[0m[31mtest[1;31m"[0m[31m[0m[1B[0G=> [31m[1;31m"[0m[31mtest[1;31m"[0m[31m[0m[0m
+[106] pry(main)> b = "test"
+[1A[0G[106] pry(main)> b = [31m[1;31m"[0m[31mtest[1;31m"[0m[31m[0m[1B[0G=> [31m[1;31m"[0m[31mtest[1;31m"[0m[31m[0m[0m
+[107] pry(main)> b.upcase!
+[1A[0G[107] pry(main)> b.upcase![1B[0G=> [31m[1;31m"[0m[31mTEST[1;31m"[0m[31m[0m[0m
+[108] pry(main)> b
+[1A[0G[108] pry(main)> b[1B[0G=> [31m[1;31m"[0m[31mTEST[1;31m"[0m[31m[0m[0m
+[109] pry(main)> a
+[1A[0G[109] pry(main)> a[1B[0G=> [31m[1;31m"[0m[31mtest[1;31m"[0m[31m[0m[0m
+[110] pry(main)> h[Kh = { k[K:a => 1, b[K:b => 2 }
+[1A[0G[110] pry(main)> h = { [33m:a[0m => [1;34m1[0m, [33m:b[0m => [1;34m2[0m }[1B[0G=> {[33m:a[0m=>[1;34m1[0m, [33m:b[0m=>[1;34m2[0m}[0m
+[111] pry(main)> k = { a: 1, b: 2 }
+[1A[0G[111] pry(main)> k = { [35ma[0m: [1;34m1[0m, [35mb[0m: [1;34m2[0m }[1B[0G=> {[33m:a[0m=>[1;34m1[0m, [33m:b[0m=>[1;34m2[0m}[0m
+[112] pry(main)> j = { "string" = [K> [] }
+[1A[0G[112] pry(main)> j = { [31m[1;31m"[0m[31mstring[1;31m"[0m[31m[0m => [] }[1B[0G=> {[31m[1;31m"[0m[31mstring[1;31m"[0m[31m[0m=>[]}[0m
+[113] pry(main)> j =[K[K["name"] = "<[KMatt"][K
+[1A[0G[113] pry(main)> j[[31m[1;31m"[0m[31mname[1;31m"[0m[31m[0m] = [31m[1;31m"[0m[31mMatt[1;31m"[0m[31m[0m[1B[0G=> [31m[1;31m"[0m[31mMatt[1;31m"[0m[31m[0m[0m
+[114] pry(main)> j[Kj[Kk.values_at
+[1A[0G[114] pry(main)> k.values_at[1B[0G=> [][0m
+[115] pry(main)> k.values_at :a, :b
+[1A[0G[115] pry(main)> k.values_at [33m:a[0m, [33m:b[0m[1B[0G=> [[1;34m1[0m, [1;34m2[0m][0m
+[116] pry(main)> k.values_at :a, :b[1P[1@([C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kj
+[1A[0G[116] pry(main)> j[1B[0G=> {[31m[1;31m"[0m[31mstring[1;31m"[0m[31m[0m=>[], [31m[1;31m"[0m[31mname[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mMatt[1;31m"[0m[31m[0m}[0m
+[117] pry(main)> j[Kj [K["last"] = "G"
+[1A[0G[117] pry(main)> j[[31m[1;31m"[0m[31mlast[1;31m"[0m[31m[0m] = [31m[1;31m"[0m[31mG[1;31m"[0m[31m[0m[1B[0G=> [31m[1;31m"[0m[31mG[1;31m"[0m[31m[0m[0m
+[118] pry(main)> j[[K[Kj["last"] = "G"[Kj.values_at("name", "last").join ", "
+[1A[0G[118] pry(main)> j.values_at([31m[1;31m"[0m[31mname[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mlast[1;31m"[0m[31m[0m).join [31m[1;31m"[0m[31m, [1;31m"[0m[31m[0m[1B[0G=> [31m[1;31m"[0m[31mMatt, G[1;31m"[0m[31m[0m[0m
+[119] pry(main)> h
+[1A[0G[119] pry(main)> h[1B[0G=> {[33m:a[0m=>[1;34m1[0m, [33m:b[0m=>[1;34m2[0m}[0m
+[120] pry(main)> h2 = { :b => 10, :c => :new }
+[1A[0G[120] pry(main)> h2 = { [33m:b[0m => [1;34m10[0m, [33m:c[0m => [33m:new[0m }[1B[0G=> {[33m:b[0m=>[1;34m10[0m, [33m:c[0m=>[33m:new[0m}[0m
+[121] pry(main)> h.merge(h2)
+[1A[0G[121] pry(main)> h.merge(h2)[1B[0G=> {[33m:a[0m=>[1;34m1[0m, [33m:b[0m=>[1;34m10[0m, [33m:c[0m=>[33m:new[0m}[0m
+[122] pry(main)> h.merge(h2)mh.merge(h2)eh.merge(h2)rh.merge(h2)gh.merge(h2)eh.merge(h2)dh.merge(h2) h.merge(h2)=h.merge(h2) h.merge(h2)
+[1A[0G[122] pry(main)> merged = h.merge(h2)[1B[0G=> {[33m:a[0m=>[1;34m1[0m, [33m:b[0m=>[1;34m10[0m, [33m:c[0m=>[33m:new[0m}[0m
+[123] pry(main)> me[K[Kmerged
+[1A[0G[123] pry(main)> merged[1B[0G=> {[33m:a[0m=>[1;34m1[0m, [33m:b[0m=>[1;34m10[0m, [33m:c[0m=>[33m:new[0m}[0m
+[124] pry(main)> h
+[1A[0G[124] pry(main)> h[1B[0G=> {[33m:a[0m=>[1;34m1[0m, [33m:b[0m=>[1;34m2[0m}[0m
+[125] pry(main)> hmerged = h.merge(h2)[1Ph.merge(h2)[1Ph.merge(h2)[1Ph.merge(h2)[1Ph.merge(h2)[1Ph.merge(h2)[1Ph.merge(h2)[1Ph.merge(h2)[1Ph.merge(h2)[1Ph.merge(h2)[C[C[C[C[C[C[C!(h2)
+[1A[0G[125] pry(main)> h.merge!(h2)[1B[0G=> {[33m:a[0m=>[1;34m1[0m, [33m:b[0m=>[1;34m10[0m, [33m:c[0m=>[33m:new[0m}[0m
+[126] pry(main)> h
+[1A[0G[126] pry(main)> h[1B[0G=> {[33m:a[0m=>[1;34m1[0m, [33m:b[0m=>[1;34m10[0m, [33m:c[0m=>[33m:new[0m}[0m
+[127] pry(main)> h = {a :[K[K[K a: 1, b: 2 }
+[1A[0G[127] pry(main)> h = { [35ma[0m: [1;34m1[0m, [35mb[0m: [1;34m2[0m }[1B[0G=> {[33m:a[0m=>[1;34m1[0m, [33m:b[0m=>[1;34m2[0m}[0m
+[128] pry(main)> h = { a: 1, b: 2 }[1P[1P
+[1A[0G[128] pry(main)> h = { [35ma[0m:[1;34m1[0m, [35mb[0m:[1;34m2[0m }[1B[0G=> {[33m:a[0m=>[1;34m1[0m, [33m:b[0m=>[1;34m2[0m}[0m
+[129] pry(main)> h = { a:1, b:2 }[1P }: }n }e }w }
+[1A[0G[129] pry(main)> h = { [35ma[0m:[1;34m1[0m, b::new }[1B[0GSyntaxError: unexpected '}', expecting =>
+[129] pry(main)> h = { a:1, b::new }[1@ 
+[1A[0G[129] pry(main)> h = { [35ma[0m:[1;34m1[0m, [35mb[0m: [33m:new[0m }[1B[0G=> {[33m:a[0m=>[1;34m1[0m, [33m:b[0m=>[33m:new[0m}[0m
+[130] pry(main)> h = { a:1, b: :new }[1P[1@ [1@ [C[C[C[C[C[C[C[C[C[C[C[C
+[1A[0G[130] pry(main)> h = { [35ma[0m: [1;34m1[0m, [35mb[0m: [33m:new[0m }[1B[0G=> {[33m:a[0m=>[1;34m1[0m, [33m:b[0m=>[33m:new[0m}[0m
+[131] pry(main)> silly_hash = { h => 123 }[K[K, :stuff => "a" }
+[1A[0G[131] pry(main)> silly_hash = { h => [1;34m123[0m, [33m:stuff[0m => [31m[1;31m"[0m[31ma[1;31m"[0m[31m[0m }[1B[0G=> {{[33m:a[0m=>[1;34m1[0m, [33m:b[0m=>[33m:new[0m}=>[1;34m123[0m, [33m:stuff[0m=>[31m[1;31m"[0m[31ma[1;31m"[0m[31m[0m}[0m
+[132] pry(main)> silly_hahs[K[Ksh[h]
+[1A[0G[132] pry(main)> silly_hash[h][1B[0G=> [1;34m123[0m[0m
+[133] pry(main)> h
+[1A[0G[133] pry(main)> h[1B[0G=> {[33m:a[0m=>[1;34m1[0m, [33m:b[0m=>[33m:new[0m}[0m
+[134] pry(main)> h.class
+[1A[0G[134] pry(main)> h.class[1B[0G=> [1;34;4mHash[0m[0m
+[135] pry(main)> Hash.new
+[1A[0G[135] pry(main)> [1;34;4mHash[0m.new[1B[0G=> {}[0m
+[136] pry(main)> Hash.new(0)zHash.new(0)hHash.new(0)aHash.new(0)sHash.new(0)hHash.new(0) Hash.new(0)=Hash.new(0) Hash.new(0)
+[1A[0G[136] pry(main)> zhash = [1;34;4mHash[0m.new([1;34m0[0m)[1B[0G=> {}[0m
+[137] pry(main)> zhash[:a] = 7
+[1A[0G[137] pry(main)> zhash[[33m:a[0m] = [1;34m7[0m[1B[0G=> [1;34m7[0m[0m
+[138] pry(main)> zhash
+[1A[0G[138] pry(main)> zhash[1B[0G=> {[33m:a[0m=>[1;34m7[0m}[0m
+[139] pry(main)> zhash[C[C[:b]
+[1A[0G[139] pry(main)> zhash[[33m:b[0m][1B[0G=> [1;34m0[0m[0m
+[140] pry(main)> zhash[:b][K
+[1A[0G[140] pry(main)> zhash[1B[0G=> {[33m:a[0m=>[1;34m7[0m}[0m
+[141] pry(main)> zhash[:b][K[Kzhash[:b][C[K[Kzhash[:A][K[Ka] = zhash[:a] + 1
+[1A[0G[141] pry(main)> zhash[[33m:a[0m] = zhash[[33m:a[0m] + [1;34m1[0m[1B[0G=> [1;34m8[0m[0m
+[142] pry(main)> zhah[Ksh
+[1A[0G[142] pry(main)> zhash[1B[0G=> {[33m:a[0m=>[1;34m8[0m}[0m
+[143] pry(main)> zhash[:a] = zhash[:a] + 1[1P[1@b[1P[1@b
+[1A[0G[143] pry(main)> zhash[[33m:b[0m] = zhash[[33m:b[0m] + [1;34m1[0m[1B[0G=> [1;34m1[0m[0m
+[144] pry(main)> zhash[:b] = zhash[:b] + 1[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kzhash
+[1A[0G[144] pry(main)> zhash[1B[0G=> {[33m:a[0m=>[1;34m8[0m, [33m:b[0m=>[1;34m1[0m}[0m
+[145] pry(main)> zhash[:b] = zhash[:b] + 1[C[C[1P 1[1P1[1P 1[1P 1[1P 1[1P 1[1P 1[1P 1[1P 1[1P 1[1P 1[1P1[1@+[C[C[C
+[1A[0G[145] pry(main)> zhash[[33m:b[0m] += [1;34m1[0m[1B[0G=> [1;34m2[0m[0m
+[146] pry(main)> zhash[:b] += 1[C[1P[1@-
+[1A[0G[146] pry(main)> zhash[[33m:b[0m] -= [1;34m1[0m[1B[0G=> [1;34m1[0m[0m
+[147] pry(main)> zhah[Ksh
+[1A[0G[147] pry(main)> zhash[1B[0G=> {[33m:a[0m=>[1;34m8[0m, [33m:b[0m=>[1;34m1[0m}[0m
+[148] pry(main)> zhash[:b] -= 1[K[Kzhash[:b] -= 1+[C[C[C-[C[C[C[K[KArray.new([K
+[1A[0G[148] pry(main)> [1;34;4mArray[0m.new[1B[0G=> [][0m
+[149] pry(main)> Fixnum.new
+[1A[0G[149] pry(main)> [1;34;4mFixnum[0m.new[1B[0GNoMethodError: undefined method `new' for Fixnum:Class
+from (pry):152:in `__pry__'
+[150] pry(main)> class Person
+[1A[0G[150] pry(main)> [32mclass[0m [1;35;4mPerson[0m[1B[0G[150] pry(main)*   def initialize name
+[1A[0G[150] pry(main)*   [32mdef[0m [1;34minitialize[0m name[1B[0G[150] pry(main)*     @name = name
+[1A[0G[150] pry(main)*     @name = name[1B[0G[150] pry(main)*     end
+[1A[0G[150] pry(main)*   [32mend[0m  [1B[0G[150] pry(main)*   def say_hellow[K
+[1A[0G[150] pry(main)*   [32mdef[0m [1;34msay_hello[0m[1B[0G[150] pry(main)*     "Hi, my name is #{@name}"
+[1A[0G[150] pry(main)*     [31m[1;31m"[0m[31mHi, my name is #{@name}[0m[31m[1;31m"[0m[31m[0m[1B[0G[150] pry(main)*     end
+[1A[0G[150] pry(main)*   [32mend[0m  [1B[0G[150] pry(main)*   end
+[1A[0G[150] pry(main)* [32mend[0m  [1B[0G=> [33m:say_hello[0m[0m
+[151] pry(main)> me = Person.james[K[K[K[K[Knew("James")
+[1A[0G[151] pry(main)> me = [1;34;4mPerson[0m.new([31m[1;31m"[0m[31mJames[1;31m"[0m[31m[0m)[1B[0G=> [31m[1;31m#<[0m[31mPerson:0x007fd99dcc16d0 @name="James"[1;31m>[0m[31m[0m[0m
+[152] pry(main)> me.say_hello
+[1A[0G[152] pry(main)> me.say_hello[1B[0G=> [31m[1;31m"[0m[31mHi, my name is James[1;31m"[0m[31m[0m[0m
+[153] pry(main)> you + P[K[K[K= Person.new("David")
+[1A[0G[153] pry(main)> you = [1;34;4mPerson[0m.new([31m[1;31m"[0m[31mDavid[1;31m"[0m[31m[0m)[1B[0G=> [31m[1;31m#<[0m[31mPerson:0x007fd99d06d7f8 @name="David"[1;31m>[0m[31m[0m[0m
+[154] pry(main)> you.say_hello
+[1A[0G[154] pry(main)> you.say_hello[1B[0G=> [31m[1;31m"[0m[31mHi, my name is David[1;31m"[0m[31m[0m[0m
+[155] pry(main)> Person
+[1A[0G[155] pry(main)> [1;34;4mPerson[0m[1B[0G=> [1;34;4mPerson[0m[0m
+[156] pry(main)> class Person
+[1A[0G[156] pry(main)> [32mclass[0m [1;35;4mPerson[0m[1B[0G[156] pry(main)*   def broken_hello
+[1A[0G[156] pry(main)*   [32mdef[0m [1;34mbroken_hello[0m[1B[0G[156] pry(main)*     "Hi, my name is #{name}"
+[1A[0G[156] pry(main)*     [31m[1;31m"[0m[31mHi, my name is #{name}[0m[31m[1;31m"[0m[31m[0m[1B[0G[156] pry(main)*     end
+[1A[0G[156] pry(main)*   [32mend[0m  [1B[0G[156] pry(main)*   end
+[1A[0G[156] pry(main)* [32mend[0m  [1B[0G=> [33m:broken_hello[0m[0m
+[157] pry(main)> ls[K[Kme.broken_hello
+[1A[0G[157] pry(main)> me.broken_hello[1B[0GNameError: undefined local variable or method `name' for #<Person:0x007fd99dcc16d0 @name="James">
+from (pry):168:in `broken_hello'
+[158] pry(main)> ls me
+[1A[0G[158] pry(main)> ls me[1B[0G[1m[1;34mPerson#methods[0m[0m: broken_hello  say_hello
+[1m[1;34minstance variables[0m[0m: [0;34m@name[0m
+[159] pry(main)> me.broken_hello
+[1A[0G[159] pry(main)> me.broken_hello[1B[0GNameError: undefined local variable or method `name' for #<Person:0x007fd99dcc16d0 @name="James">
+from (pry):168:in `broken_hello'
+[160] pry(main)> h
+[1A[0G[160] pry(main)> h[1B[0G=> {[33m:a[0m=>[1;34m1[0m, [33m:b[0m=>[33m:new[0m}[0m
+[161] pry(main)> class Person
+[1A[0G[161] pry(main)> [32mclass[0m [1;35;4mPerson[0m[1B[0G[161] pry(main)*   def show_h
+[1A[0G[161] pry(main)*   [32mdef[0m [1;34mshow_h[0m[1B[0G[161] pry(main)*     put [Ks h.to_s
+[1A[0G[161] pry(main)*     puts h.to_s[1B[0G[161] pry(main)*     end
+[1A[0G[161] pry(main)*   [32mend[0m  [1B[0G[161] pry(main)*   end
+[1A[0G[161] pry(main)* [32mend[0m  [1B[0G=> [33m:show_h[0m[0m
+[162] pry(main)> Person.new("test").show_h
+[1A[0G[162] pry(main)> [1;34;4mPerson[0m.new([31m[1;31m"[0m[31mtest[1;31m"[0m[31m[0m).show_h[1B[0GNameError: undefined local variable or method `h' for #<Person:0x007fd99b61da10 @name="test">
+from (pry):176:in `show_h'
+[163] pry(main)> class Fixnum
+[1A[0G[163] pry(main)> [32mclass[0m [1;35;4mFixnum[0m[1B[0G[163] pry(main)*   def is_palindrome?
+[1A[0G[163] pry(main)*   [32mdef[0m [1;34mis_palindrome?[0m[1B[0G[163] pry(main)*     self.to_s == self.to_s.reverse
+[1A[0G[163] pry(main)*     [1;36mself[0m.to_s == [1;36mself[0m.to_s.reverse[1B[0G[163] pry(main)*     end
+[1A[0G[163] pry(main)*   [32mend[0m  [1B[0G[163] pry(main)*   end
+[1A[0G[163] pry(main)* [32mend[0m  [1B[0G=> [33m:is_palindrome?[0m[0m
+[164] pry(main)> 121.is_a[Kpalindrome?
+[1A[0G[164] pry(main)> [1;34m121[0m.is_palindrome?[1B[0G=> [1;36mtrue[0m[0m
+[165] pry(main)> 11234.is_palindrome?
+[1A[0G[165] pry(main)> [1;34m11234[0m.is_palindrome?[1B[0G=> [1;36mfalse[0m[0m
+[166] pry(main)> 12.zero?
+[1A[0G[166] pry(main)> [1;34m12[0m.zero?[1B[0G=> [1;36mfalse[0m[0m
+[167] pry(main)> 12.ec[Kven?
+[1A[0G[167] pry(main)> [1;34m12[0m.even?[1B[0G=> [1;36mtrue[0m[0m
+[168] pry(main)> ls {}
+[1A[0G[168] pry(main)> ls {}[1B[0G[1m[1;34mEnumerable#methods[0m[0m: 
+  all?            cycle       each_slice        find_index  lazy    minmax     reverse_each  zip
+  any?            detect      each_with_index   first       map     minmax_by  slice_before
+  chunk           drop        each_with_object  flat_map    max     none?      sort        
+  collect         drop_while  entries           grep        max_by  one?       sort_by     
+  collect_concat  each_cons   find              group_by    min     partition  take        
+  count           each_entry  find_all          inject      min_by  reduce     take_while  
+[1m[1;34mHash#methods[0m[0m: 
+  ==                    default=       each_value  include?  length              reject   to_a     
+  []                    default_proc   empty?      index     member?             reject!  to_h     
+  []=                   default_proc=  eql?        inspect   merge               replace  to_hash  
+  assoc                 delete         fetch       invert    merge!              select   to_s     
+  clear                 delete_if      flatten     keep_if   pretty_print        select!  update   
+  compare_by_identity   each           has_key?    key       pretty_print_cycle  shift    value?   
+  compare_by_identity?  each_key       has_value?  key?      rassoc              size     values   
+  default               each_pair      hash        keys      rehash              store    values_at
+[169] pry(main)> ls Person
+[1A[0G[169] pry(main)> ls [1;34;4mPerson[0m[1B[0G[1m[1;34mPerson#methods[0m[0m: broken_hello  say_hello  show_h
+[170] pry(main)> class SecretivePerson < Person
+[1A[0G[170] pry(main)> [32mclass[0m [1;35;4mSecretivePerson[0m < [1;34;4mPerson[0m[1B[0G[170] pry(main)*   def say_hello
+[1A[0G[170] pry(main)*   [32mdef[0m [1;34msay_hello[0m[1B[0G[170] pry(main)*     "My i[Kname is _________"
+[1A[0G[170] pry(main)*     [31m[1;31m"[0m[31mMy name is _________[1;31m"[0m[31m[0m[1B[0G[170] pry(main)*     end
+[1A[0G[170] pry(main)*   [32mend[0m  [1B[0G[170] pry(main)*   end
+[1A[0G[170] pry(main)* [32mend[0m  [1B[0G=> [33m:say_hello[0m[0m
+[171] pry(main)> s = SecretivePerson[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kend[Kend[Ksp = SecretivePerson.new
+SecretivePerson.new
+[171] pry(main)> sp = SecretivePerson.new("Blank")
+[1A[0G[171] pry(main)> sp = [1;34;4mSecretivePerson[0m.new([31m[1;31m"[0m[31mBlank[1;31m"[0m[31m[0m)[1B[0G=> [31m[1;31m#<[0m[31mSecretivePerson:0x007fd99d05db50 @name="Blank"[1;31m>[0m[31m[0m[0m
+[172] pry(main)> sp.say_hello
+[1A[0G[172] pry(main)> sp.say_hello[1B[0G=> [31m[1;31m"[0m[31mMy name is _________[1;31m"[0m[31m[0m[0m
+[173] pry(main)> jo = Person.new("JO[Ko")
+[1A[0G[173] pry(main)> jo = [1;34;4mPerson[0m.new([31m[1;31m"[0m[31mJo[1;31m"[0m[31m[0m)[1B[0G=> [31m[1;31m#<[0m[31mPerson:0x007fd99b6c4540 @name="Jo"[1;31m>[0m[31m[0m[0m
+[174] pry(main)> jo.sa_[Ky_l[Khello
+[1A[0G[174] pry(main)> jo.say_hello[1B[0G=> [31m[1;31m"[0m[31mHi, my name is Jo[1;31m"[0m[31m[0m[0m
+[175] pry(main)> 
