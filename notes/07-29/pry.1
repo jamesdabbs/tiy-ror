@@ -1,0 +1,158 @@
+[0G[1] pry(main)> 10.times { puts "Doing stuff" }
+[1A[0G[1] pry(main)> [1;34m10[0m.times { puts [31m[1;31m"[0m[31mDoing stuff[1;31m"[0m[31m[0m }[1B[0GDoing stuff
+Doing stuff
+Doing stuff
+Doing stuff
+Doing stuff
+Doing stuff
+Doing stuff
+Doing stuff
+Doing stuff
+Doing stuff
+=> [1;34m10[0m[0m
+[2] pry(main)> 10.times { puts "Doing stuff" }[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kdo
+[1A[0G[2] pry(main)> [1;34m10[0m.times [32mdo[0m[1B[0G[2] pry(main)*   puts "Doing stuff"
+[1A[0G[2] pry(main)*   puts [31m[1;31m"[0m[31mDoing stuff[1;31m"[0m[31m[0m[1B[0G[2] pry(main)*   end
+[1A[0G[2] pry(main)* [32mend[0m  [1B[0GDoing stuff
+Doing stuff
+Doing stuff
+Doing stuff
+Doing stuff
+Doing stuff
+Doing stuff
+Doing stuff
+Doing stuff
+Doing stuff
+=> [1;34m10[0m[0m
+[3] pry(main)> resu[K[K[K[Kvalues = []
+[1A[0G[3] pry(main)> values = [][1B[0G=> [][0m
+[4] pry(main)> 0.upd[Kto(10) do
+[1A[0G[4] pry(main)> [1;34m0[0m.upto([1;34m10[0m) [32mdo[0m[1B[0G[4] pry(main)*   next if [K[K[K[K[K[K[K[K
+[5] pry(main)> o[K0.upto [K(1)[K0) do |i|
+[1A[0G[5] pry(main)> [1;34m0[0m.upto([1;34m10[0m) [32mdo[0m |i|[1B[0G[5] pry(main)*   next if i %[K[K.even?
+[1A[0G[5] pry(main)*   [32mnext[0m [32mif[0m i.even?[1B[0G[5] pry(main)*   values << i
+[1A[0G[5] pry(main)*   values << i[1B[0G[5] pry(main)*   end
+[1A[0G[5] pry(main)* [32mend[0m  [1B[0G=> [1;34m0[0m[0m
+[6] pry(main)> end  values << iend[K[Kvalues
+[1A[0G[6] pry(main)> values[1B[0G=> [[1;34m1[0m, [1;34m3[0m, [1;34m5[0m, [1;34m7[0m, [1;34m9[0m][0m
+[7] pry(main)> 0.y[Kupto(10).to_a
+[1A[0G[7] pry(main)> [1;34m0[0m.upto([1;34m10[0m).to_a[1B[0G=> [[1;34m0[0m, [1;34m1[0m, [1;34m2[0m, [1;34m3[0m, [1;34m4[0m, [1;34m5[0m, [1;34m6[0m, [1;34m7[0m, [1;34m8[0m, [1;34m9[0m, [1;34m10[0m][0m
+[8] pry(main)> words = %w(this is a list of pu[K[Ko[Kwords)
+[1A[0G[8] pry(main)> words = [31m[1;31m%w([0m[31mthis is a list of words[1;31m)[0m[31m[0m[1B[0G=> [[31m[1;31m"[0m[31mthis[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mis[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31ma[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mlist[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mof[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mwords[1;31m"[0m[31m[0m][0m
+[9] pry(main)> words.each { |word| puts "Got a word: {[K#{word.capitalize}" }
+[1A[0G[9] pry(main)> words.each { |word| puts [31m[1;31m"[0m[31mGot a word: #{word.capitalize}[0m[31m[1;31m"[0m[31m[0m }[1B[0GGot a word: This
+Got a word: Is
+Got a word: A
+Got a word: List
+Got a word: Of
+Got a word: Words
+=> [[31m[1;31m"[0m[31mthis[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mis[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31ma[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mlist[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mof[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mwords[1;31m"[0m[31m[0m][0m
+[10] pry(main)> words.map { |words| words.upcase }
+[1A[0G[10] pry(main)> words.map { |words| words.upcase }[1B[0G=> [[31m[1;31m"[0m[31mTHIS[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mIS[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mA[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mLIST[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mOF[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mWORDS[1;31m"[0m[31m[0m][0m
+[11] pry(main)> wo[K[Kupwords = [K[Kwords.map { |words| words.upcase }[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@u[1@p[C[1@w[1@o[1@r[1@d[1@s[1@ [1@=[1@ 
+[1A[0G[11] pry(main)> upwords = words.map { |words| words.upcase }[1B[0G=> [[31m[1;31m"[0m[31mTHIS[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mIS[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mA[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mLIST[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mOF[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mWORDS[1;31m"[0m[31m[0m][0m
+[12] pry(main)> upwords
+[1A[0G[12] pry(main)> upwords[1B[0G=> [[31m[1;31m"[0m[31mTHIS[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mIS[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mA[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mLIST[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mOF[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mWORDS[1;31m"[0m[31m[0m][0m
+[13] pry(main)> words
+[1A[0G[13] pry(main)> words[1B[0G=> [[31m[1;31m"[0m[31mthis[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mis[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31ma[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mlist[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mof[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mwords[1;31m"[0m[31m[0m][0m
+[14] pry(main)> wordsupwords = words.map { |words| words.upcase }[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@"[1@U[1@p[1@c[1@a[1@s[1@e[1@ [C[1@w[1P[1P[1@ [C[1@w[1@o[1@r[1@d[1@:[1@ [1@#[1@{[C[C[C[C[C[C[C[C[C[C[C[C} }" }
+[1A[0G[14] pry(main)> words.map { |words| [31m[1;31m"[0m[31mUpcase word: #{words.upcase}[0m[31m[1;31m"[0m[31m[0m }[1B[0G=> [[31m[1;31m"[0m[31mUpcase word: THIS[1;31m"[0m[31m[0m,
+ [31m[1;31m"[0m[31mUpcase word: IS[1;31m"[0m[31m[0m,
+ [31m[1;31m"[0m[31mUpcase word: A[1;31m"[0m[31m[0m,
+ [31m[1;31m"[0m[31mUpcase word: LIST[1;31m"[0m[31m[0m,
+ [31m[1;31m"[0m[31mUpcase word: OF[1;31m"[0m[31m[0m,
+ [31m[1;31m"[0m[31mUpcase word: WORDS[1;31m"[0m[31m[0m][0m
+[15] pry(main)> words.map { |words| "Upcase word: #{words.upcase}" }[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kwords.map { |words| "Upcase word: #{words.upcase}" }[C[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K"Number of seconds in a day: #{24 * 60 * 60 [K}"
+[1A[0G[15] pry(main)> [31m[1;31m"[0m[31mNumber of seconds in a day: #{24 * 60 * 60}[0m[31m[1;31m"[0m[31m[0m[1B[0G=> [31m[1;31m"[0m[31mNumber of seconds in a day: 86400[1;31m"[0m[31m[0m[0m
+[16] pry(main)> "Number of seconds in a day: #{24 * 60 * 60}"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5Pwords.map { |words| "Upcase word: #{}" }[C[1P[C[1P }[1P }[1P }[1P}[1P }[1P }[1P }[1P }[1P }[1P}[1P }[1P }[1P }[1P }[1P }[1P }[1P }[C[1P}[C[K[K[1P|words|[1P|words|d|words|o|words| |words|[C[C[C[C[C[C[C
+[1A[0G[16] pry(main)> words.map [32mdo[0m |words|[1B[0G[16] pry(main)*   puts word
+[1A[0G[16] pry(main)*   puts word[1B[0G[16] pry(main)*   word.upcase[K[K[K[K[K[K
+[17] pry(main)>   puts wordwords.map do |words|
+[1A[0G[17] pry(main)> words.map [32mdo[0m |words|[1B[0G[17] pry(main)*   puts wordc[K.upcase
+[1A[0G[17] pry(main)*   puts word.upcase[1B[0G[17] pry(main)*   word.upcase
+[1A[0G[17] pry(main)*   word.upcase[1B[0G[17] pry(main)*   end
+[1A[0G[17] pry(main)* [32mend[0m  [1B[0GNameError: undefined local variable or method `word' for main:Object
+from (pry):21:in `block in __pry__'
+[18] pry(main)> end  word.upcaseputs word.upcase[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cwords.map do |words|[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[9P  puts wordwords.map do |words|
+[1A[0G[18] pry(main)> words.map [32mdo[0m |words|[1B[0G[18] pry(main)*   
+[19] pry(main)> words.map do |words|[1P|
+[1A[0G[19] pry(main)> words.map [32mdo[0m |word|[1B[0G[19] pry(main)*   words.map do |word|s|[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cend[K  word.upcaseputs word.upcase
+[1A[0G[19] pry(main)*   puts word.upcase  [1B[0G[19] pry(main)*     puts word.upcasewords.map do |word|s|[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cend[K  word.upcase
+[1A[0G[19] pry(main)*   word.upcase  [1B[0G[19] pry(main)*   end
+[1A[0G[19] pry(main)* [32mend[0m  [1B[0GTHIS
+IS
+A
+LIST
+OF
+WORDS
+=> [[31m[1;31m"[0m[31mTHIS[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mIS[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mA[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mLIST[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mOF[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mWORDS[1;31m"[0m[31m[0m][0m
+[20] pry(main)> end  word.upcaseputs word.upcase[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cwords.map do |word|[1P|[1P|[1P|[1P|x|[C[K[K*ag[Krgs|[1P|[1P|[1P|[1P|[1P|x|
+[1A[0G[20] pry(main)> words.map [32mdo[0m |x|[1B[0G[20] pry(main)*   puts x.upcase
+[1A[0G[20] pry(main)*   puts x.upcase[1B[0G[20] pry(main)*   x.capt[Kitalize[K[K[K[K[K[K[K[K[K[Kreverse
+[1A[0G[20] pry(main)*   x.reverse[1B[0G[20] pry(main)*   end
+[1A[0G[20] pry(main)* [32mend[0m  [1B[0GTHIS
+IS
+A
+LIST
+OF
+WORDS
+=> [[31m[1;31m"[0m[31msiht[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31msi[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31ma[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mtsil[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mfo[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31msdrow[1;31m"[0m[31m[0m][0m
+[21] pry(main)> end  x.reverseputs x.upcasewords.map do |x|[C[1P[1P[1P[1@e[1@c[1@h[1P[1P[1@a[1@c[1@h
+[1A[0G[21] pry(main)> words.each [32mdo[0m |x|[1B[0G[21] pry(main)*   words.each do |x|end[K  x.reverseputs x.upcase
+[1A[0G[21] pry(main)*   puts x.upcase  [1B[0G[21] pry(main)*     puts x.upcasewords.each do |x|end[K  x.reverse
+[1A[0G[21] pry(main)*   x.reverse  [1B[0G[21] pry(main)*   end
+[1A[0G[21] pry(main)* [32mend[0m  [1B[0GTHIS
+IS
+A
+LIST
+OF
+WORDS
+=> [[31m[1;31m"[0m[31mthis[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mis[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31ma[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mlist[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mof[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mwords[1;31m"[0m[31m[0m][0m
+[22] pry(main)> { :[K[K[Kls []
+[1A[0G[22] pry(main)> ls [][1B[0G[1m[1;34mEnumerable#methods[0m[0m: 
+  all?            detect      each_with_index   find_all  inject  member?  minmax_by  reduce      
+  any?            each_cons   each_with_object  flat_map  lazy    min      none?      slice_before
+  chunk           each_entry  entries           grep      max     min_by   one?       sort_by     
+  collect_concat  each_slice  find              group_by  max_by  minmax   partition
+[1m[1;34mArray#methods[0m[0m: 
+  &      bsearch      delete_at   first     last                push                  rotate     slice!      uniq     
+  *      clear        delete_if   flatten   length              rassoc                rotate!    sort        uniq!    
+  +      collect      drop        flatten!  map                 reject                sample     sort!       unshift  
+  -      collect!     drop_while  frozen?   map!                reject!               select     sort_by!    values_at
+  <<     combination  each        hash      pack                repeated_combination  select!    take        zip      
+  <=>    compact      each_index  include?  permutation         repeated_permutation  shelljoin  take_while  |        
+  ==     compact!     empty?      index     place               replace               shift      to_a      
+  []     concat       eql?        insert    pop                 reverse               shuffle    to_ary    
+  []=    count        fetch       inspect   pretty_print        reverse!              shuffle!   to_h      
+  assoc  cycle        fill        join      pretty_print_cycle  reverse_each          size       to_s      
+  at     delete       find_index  keep_if   product             rindex                slice      transpose 
+[23] pry(main)> ls {}
+[1A[0G[23] pry(main)> ls {}[1B[0G[1m[1;34mEnumerable#methods[0m[0m: 
+  all?            count       each_cons         entries     flat_map  map     minmax     reduce        take      
+  any?            cycle       each_entry        find        grep      max     minmax_by  reverse_each  take_while
+  chunk           detect      each_slice        find_all    group_by  max_by  none?      slice_before  zip       
+  collect         drop        each_with_index   find_index  inject    min     one?       sort        
+  collect_concat  drop_while  each_with_object  first       lazy      min_by  partition  sort_by     
+[1m[1;34mHash#methods[0m[0m: 
+  ==                    default        each_key    has_key?    keep_if  merge!              replace  to_h     
+  []                    default=       each_pair   has_value?  key      pretty_print        select   to_hash  
+  []=                   default_proc   each_value  hash        key?     pretty_print_cycle  select!  to_s     
+  assoc                 default_proc=  empty?      include?    keys     rassoc              shift    update   
+  clear                 delete         eql?        index       length   rehash              size     value?   
+  compare_by_identity   delete_if      fetch       inspect     member?  reject              store    values   
+  compare_by_identity?  each           flatten     invert      merge    reject!             to_a     values_at
+[24] pry(main)> h = { :a => 1, :b => 1[K2 }
+[1A[0G[24] pry(main)> h = { [33m:a[0m => [1;34m1[0m, [33m:b[0m => [1;34m2[0m }[1B[0G=> {[33m:a[0m=>[1;34m1[0m, [33m:b[0m=>[1;34m2[0m}[0m
+[25] pry(main)> h.each do ||[C[C[Ck|e|y|,| |v|a|l|u|e|[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P|[1P|[1P|[1P|[1P|_|[1P|v|a|l|u|e|[C
+[1A[0G[25] pry(main)> h.each [32mdo[0m |key, value|[1B[0G[25] pry(main)*   puts "Key #{key} corresponds to #{value}"
+[1A[0G[25] pry(main)*   puts [31m[1;31m"[0m[31mKey #{key}[0m[31m corresponds to #{value}[0m[31m[1;31m"[0m[31m[0m[1B[0G[25] pry(main)*   end
+[1A[0G[25] pry(main)* [32mend[0m  [1B[0GKey a corresponds to 1
+Key b corresponds to 2
+=> {[33m:a[0m=>[1;34m1[0m, [33m:b[0m=>[1;34m2[0m}[0m
+[26] pry(main)> end  puts "Key #{key} corresponds to #{value}"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[21Ph.each do |key, value|[1P|[1P|[1P|[1P|[1P|[1P|[1P|[C
+[1A[0G[26] pry(main)> h.each [32mdo[0m |key|[1B[0G[26] pry(main)*   puts "Key is [K: #{key}"[K"
+[1A[0G[26] pry(main)*   puts [31m[1;31m"[0m[31mKey is: #{key}[0m[31m[1;31m"[0m[31m[0m[1B[0G[26] pry(main)*   end
+[1A[0G[26] pry(main)* [32mend[0m  [1B[0GKey is: [:a, 1]
+Key is: [:b, 2]
+=> {[33m:a[0m=>[1;34m1[0m, [33m:b[0m=>[1;34m2[0m}[0m
+[27] pry(main)> x,[K [K [K
