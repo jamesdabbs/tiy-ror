@@ -4,7 +4,7 @@
   What methods do symbols have that strings don't?
 * Why doesn't Fixnum.new work?
 * Write code using methods on at least one number, string, symbol,
-  array and hash. Make a gist from the code.
+  array and hash.
 * Define Musher class such that
   Musher.new("+").mush(["array", "of", "strings"])  == "array + of + strings"
 * Define an Averager class that can compute the average of two numbers.
