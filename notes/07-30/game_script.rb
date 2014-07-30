@@ -6,7 +6,7 @@ game = GuessingGame.new
 until game.finished?
   print "Enter a guess: "
   number = gets.chomp.to_i
-  game.guess(number)
+  puts game.guess(number)
 end
 
 if game.won?

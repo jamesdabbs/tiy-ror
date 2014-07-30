@@ -4,8 +4,22 @@ class GuessingGame
   # - respond with high / low
   # Keep track of number of guesses
   # - fail the game if we've run out
-  def initialize
-    @answer = (0..100).to_a.sample
+  attr_reader :tries_left # attr_writer, attr_accessor
+
+  def initialize(answer=nil)
+    @answer = if answer
+      answer
+    else
+      (0..100).to_a.sample
+    end
+
+    # Alternative
+    # @answer   = answer
+    # @answer ||= (0..100).to_a.sample
+
+    # Or
+    # @answer = answer || (0..100).to_a.sample
+
     @tries_left = 5
     @won = false
   end
@@ -16,24 +30,22 @@ class GuessingGame
     if number == @answer
       @won = true
     elsif number < @answer
-      puts "Your guess is too low"
+      "Your guess is too low"
     else
-      puts "Your guess is too high"
+      "Your guess is too high"
     end
   end
 
   def finished?
-    # if @tries_left.zero?
-    #   true
-    # elsif @won
-    #   true
-    # else
-    #   false
-    # end
     @tries_left.zero? || @won
   end
 
   def won?
     @won
   end
+
+  # Using attr_reader instead
+  #def tries_left
+  #  @tries_left
+  #end
 end
