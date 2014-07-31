@@ -19,6 +19,11 @@ describe("The hangman game") do
     assert_equal game.available_letters.count, starting.count - 1
   end
 
+  it "lets a player know how many misses they have left" do
+    game = Hangman.new("zebra")
+    assert_equal game.misses_remaining, 6    
+  end
+
   it "only lets you guess from available letters" do
     game = Hangman.new("quadcopter")
     game.guess("x")
@@ -34,6 +39,4 @@ describe("The hangman game") do
   it "displays correctly guessed letters on the board"
 
   it "is case insensitive"
-
-  it "lets a player know how many misses they have left"
 end
