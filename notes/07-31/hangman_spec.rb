@@ -21,7 +21,7 @@ describe("The hangman game") do
 
   it "lets a player know how many misses they have left" do
     game = Hangman.new("zebra")
-    assert_equal game.misses_remaining, 6    
+    assert_equal game.misses_remaining, 6
   end
 
   it "only lets you guess from available letters" do
@@ -32,7 +32,13 @@ describe("The hangman game") do
     assert_equal game.misses_remaining, 5
   end
 
-  it "can by solved by guessing the word"
+  it "can by solved by guessing the word" do
+    game = Hangman.new("up")
+    game.guess("u")
+    game.guess("p")
+    assert_equal game.finished?, true
+    assert_equal game.won?, true
+  end
 
   it "is over when you run out of guesses"
 
