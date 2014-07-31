@@ -5,6 +5,11 @@ class Hangman
     @guessed = []
   end
 
+  # or attr_reader :misses_remaining
+  def misses_remaining
+    @misses_remaining
+  end
+
   def available_letters
     ('a'..'z').to_a - @guessed
   end
@@ -22,14 +27,16 @@ class Hangman
     result
   end
 
+  # TODO: clean this up
   def guess(letter)
-    @guessed << letter
-    # Return true if the guess was right
-    if @answer.include?(letter)
-      true
-    else
-      false
+    found = @answer.include?(letter)
+
+    unless @guessed.include?(letter)
+      @guessed << letter
+      @misses_remaining -= 1 unless found
     end
+
+    found
   end
 
   def finished?

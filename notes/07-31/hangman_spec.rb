@@ -19,7 +19,13 @@ describe("The hangman game") do
     assert_equal game.available_letters.count, starting.count - 1
   end
 
-  it "only lets you guess from available letters"
+  it "only lets you guess from available letters" do
+    game = Hangman.new("quadcopter")
+    game.guess("x")
+    assert_equal game.misses_remaining, 5
+    game.guess("x")
+    assert_equal game.misses_remaining, 5
+  end
 
   it "can by solved by guessing the word"
 
