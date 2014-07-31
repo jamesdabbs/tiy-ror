@@ -18,6 +18,16 @@ class Hangman
     result
   end
 
+  def guess(letter)
+    @guessed << letter
+    # Return true if the guess was right
+    if @answer.include?(letter)
+      true
+    else
+      false
+    end
+  end
+
   def finished?
     won? || lost?
   end
