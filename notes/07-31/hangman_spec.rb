@@ -40,7 +40,12 @@ describe("The hangman game") do
     assert_equal game.won?, true
   end
 
-  it "is over when you run out of guesses"
+  it "is over after 6 bad guesses" do
+    game = Hangman.new("up")
+    ('a'..'f').each { |letter| game.guess(letter) }
+    assert_equal game.finished?, true
+    assert_equal game.lost?, true
+  end
 
   it "displays correctly guessed letters on the board"
 
