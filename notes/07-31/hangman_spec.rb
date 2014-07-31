@@ -47,7 +47,11 @@ describe("The hangman game") do
     assert_equal game.lost?, true
   end
 
-  it "displays correctly guessed letters on the board"
+  it "displays correctly guessed letters on the board" do
+    game = Hangman.new("banana")
+    game.guess("a")
+    assert_equal game.board, "_a_a_a"
+  end
 
   it "is case insensitive"
 end
