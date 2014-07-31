@@ -50,7 +50,7 @@ describe("The hangman game") do
   it "displays correctly guessed letters on the board" do
     game = Hangman.new("banana")
     game.guess("a")
-    assert_equal game.board, "_a_a_a"
+    assert_equal "_a_a_a", game.board
   end
 
   it "is case insensitive"
