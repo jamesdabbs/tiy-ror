@@ -12,7 +12,12 @@ describe("The hangman game") do
     assert_equal game.guess("e"), false
   end
 
-  it "removes letters from available letters after a guess"
+  it "removes letters from available letters after a guess" do
+    game = Hangman.new("banana")
+    starting = game.available_letters
+    game.guess(starting.first)
+    assert_equal game.available_letters.count, starting.count - 1
+  end
 
   it "only lets you guess from available letters"
 

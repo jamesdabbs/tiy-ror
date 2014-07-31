@@ -5,6 +5,10 @@ class Hangman
     @guessed = []
   end
 
+  def available_letters
+    ('a'..'z').to_a - @guessed
+  end
+
   def board
     # Take @answer and only show letters that the player has guessed
     result = ""
